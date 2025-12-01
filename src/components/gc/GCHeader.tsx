@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useI18n } from '@/i18n/I18nContext'
 import { GCContainer } from './GCContainer'
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 export function GCHeader() {
   const { language, setLanguage, t } = useI18n()
@@ -148,8 +149,4 @@ export function GCHeader() {
       </div>
     </header>
   )
-}
-
-function cn(...classes: (string | boolean | undefined)[]) {
-  return classes.filter(Boolean).join(' ')
 }
