@@ -3,6 +3,7 @@ import { useI18n } from '@/i18n/I18nContext'
 import { GCContainer } from './GCContainer'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { CanadaWordmark } from '@/components/graphics/CanadaWordmark'
 
 export function GCHeader() {
   const { language, setLanguage, t } = useI18n()
@@ -24,11 +25,7 @@ export function GCHeader() {
         <GCContainer>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <img 
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='30' viewBox='0 0 120 30'%3E%3Ctext x='0' y='20' font-family='Arial' font-size='14' font-weight='bold' fill='white'%3ECanada%3C/text%3E%3C/svg%3E"
-                alt={t.common.gouvernement_of_canada}
-                className="h-6"
-              />
+              <CanadaWordmark />
             </div>
             <Button
               onClick={toggleLanguage}

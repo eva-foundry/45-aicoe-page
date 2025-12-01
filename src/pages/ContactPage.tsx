@@ -3,7 +3,9 @@ import { GCContainer } from '@/components/gc/GCContainer'
 import { GCBreadcrumbs } from '@/components/gc/GCBreadcrumbs'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardContent } from '@/components/gc/GCCard'
 import { GCNotice } from '@/components/gc/GCUtils'
-import { Check } from '@phosphor-icons/react'
+import { Check, Envelope, UsersFour, ChatCircleDots } from '@phosphor-icons/react'
+import { HeroBanner } from '@/components/graphics/HeroBanner'
+import { IconCard } from '@/components/graphics/IconCard'
 
 export function ContactPage() {
   const { t } = useI18n()
@@ -13,13 +15,33 @@ export function ContactPage() {
       <GCBreadcrumbs items={[{ label: t.contact.breadcrumb }]} />
       <main id="main-content" className="py-12">
         <GCContainer size="lg">
-          <h1 className="text-4xl font-bold text-primary mb-8">
-            {t.contact.title}
-          </h1>
+          <HeroBanner
+            title={t.contact.title}
+            description={t.contact.intro}
+            variant="gradient"
+            icon={<Envelope size={48} weight="fill" />}
+          />
 
-          <p className="text-lg text-foreground leading-relaxed mb-12">
-            {t.contact.intro}
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <IconCard
+              icon={<UsersFour size={32} weight="fill" />}
+              title="Tiered Support"
+              description="Choose the right level of support for your project needs"
+              variant="primary"
+            />
+            <IconCard
+              icon={<ChatCircleDots size={32} weight="fill" />}
+              title="Expert Guidance"
+              description="Get help from AI specialists and workflow experts"
+              variant="primary"
+            />
+            <IconCard
+              icon={<Check size={32} weight="fill" />}
+              title="Quick Response"
+              description="We'll help you get started on your AI journey"
+              variant="primary"
+            />
+          </div>
 
           <section className="mb-12">
             <GCCard variant="bordered" className="border-accent/30 bg-accent/5">

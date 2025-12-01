@@ -108,20 +108,37 @@ Animations should be minimal and functional, supporting usability without drawin
 ## Component Selection
 
 - **Components**: 
-  - Header with language toggle and top navigation
+  - Header with language toggle, Canada wordmark, and top navigation
   - Breadcrumbs for page hierarchy
+  - Hero banners with icon, title, subtitle, and description (3 variants)
   - Cards for service tiers, use case options, and outcomes
+  - Icon cards for feature highlights with hover animations
   - Stepper for workflow model and roadmap phases
   - Details/accordion for expandable content (pros/cons)
   - Button for CTAs and navigation
   - Notice for important callouts
   - Container and Grid for layout structure
+  - Service tier badges with distinctive icons
+  - Decorative pattern overlays (dots, grid, waves, circuit)
+  - AI-themed illustrations (brain, network, workflow, collaboration)
 
 - **Customizations**: 
   - Language switcher integrated into header
-  - GC signature branding in footer
+  - GC signature branding with Canada wordmark SVG component
   - Step indicator component for workflow visualization
   - Bilingual content wrapper components
+  - Custom hero banner component with 3 visual variants
+  - Icon card component with hover scale effects
+  - Decorative background patterns for visual interest
+  - Abstract AI illustrations for thematic reinforcement
+
+- **Icon System**:
+  - Phosphor Icons used consistently throughout
+  - Key icons: Sparkle (innovation), Lightbulb (ideas), Users (collaboration), 
+    Rocket (deployment), Check (success), Target (goals), FlowArrow (workflow),
+    MapTrifold (roadmap), Warning (alerts), Envelope (contact), Stack (services)
+  - Icons sized appropriately: 48px for heroes, 32px for cards, 20-24px for lists
+  - Weight usage: "fill" for primary actions, "bold" for secondary elements
 
 - **States**: 
   - Links: default (blue), hover (darker blue + underline), focus (outline ring), visited (purple tint)

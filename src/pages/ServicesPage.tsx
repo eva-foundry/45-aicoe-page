@@ -2,7 +2,9 @@ import { useI18n } from '@/i18n/I18nContext'
 import { GCContainer } from '@/components/gc/GCContainer'
 import { GCBreadcrumbs } from '@/components/gc/GCBreadcrumbs'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardSubtitle, GCCardContent } from '@/components/gc/GCCard'
-import { Check, Lightbulb } from '@phosphor-icons/react'
+import { Check, Lightbulb, Stack } from '@phosphor-icons/react'
+import { HeroBanner } from '@/components/graphics/HeroBanner'
+import { ServiceTierBadge } from '@/components/graphics/ServiceTierBadge'
 
 export function ServicesPage() {
   const { t } = useI18n()
@@ -12,18 +14,20 @@ export function ServicesPage() {
       <GCBreadcrumbs items={[{ label: t.services.breadcrumb }]} />
       <main id="main-content" className="py-12">
         <GCContainer>
-          <h1 className="text-4xl font-bold text-primary mb-8">
-            {t.services.title}
-          </h1>
-
-          <p className="text-lg text-foreground leading-relaxed mb-12">
-            {t.services.intro}
-          </p>
+          <HeroBanner
+            title={t.services.title}
+            description={t.services.intro}
+            variant="gradient"
+            icon={<Stack size={48} weight="fill" />}
+          />
 
           <div className="space-y-8">
             <GCCard variant="elevated" className="border-2 border-accent">
               <GCCardHeader>
-                <GCCardTitle className="text-2xl">{t.services.tier_1_title}</GCCardTitle>
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <GCCardTitle className="text-2xl">{t.services.tier_1_title}</GCCardTitle>
+                  <ServiceTierBadge tier={1} />
+                </div>
                 <GCCardSubtitle>{t.services.tier_1_subtitle}</GCCardSubtitle>
               </GCCardHeader>
               <GCCardContent>
@@ -55,7 +59,10 @@ export function ServicesPage() {
 
             <GCCard variant="elevated" className="border-2 border-accent">
               <GCCardHeader>
-                <GCCardTitle className="text-2xl">{t.services.tier_2_title}</GCCardTitle>
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <GCCardTitle className="text-2xl">{t.services.tier_2_title}</GCCardTitle>
+                  <ServiceTierBadge tier={2} />
+                </div>
                 <GCCardSubtitle>{t.services.tier_2_subtitle}</GCCardSubtitle>
               </GCCardHeader>
               <GCCardContent>
@@ -87,7 +94,10 @@ export function ServicesPage() {
 
             <GCCard variant="elevated" className="border-2 border-primary">
               <GCCardHeader>
-                <GCCardTitle className="text-2xl">{t.services.tier_3_title}</GCCardTitle>
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <GCCardTitle className="text-2xl">{t.services.tier_3_title}</GCCardTitle>
+                  <ServiceTierBadge tier={3} />
+                </div>
                 <GCCardSubtitle>{t.services.tier_3_subtitle}</GCCardSubtitle>
               </GCCardHeader>
               <GCCardContent>

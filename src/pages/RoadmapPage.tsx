@@ -3,7 +3,10 @@ import { GCContainer } from '@/components/gc/GCContainer'
 import { GCBreadcrumbs } from '@/components/gc/GCBreadcrumbs'
 import { GCStepper } from '@/components/gc/GCUtils'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardContent } from '@/components/gc/GCCard'
-import { Check } from '@phosphor-icons/react'
+import { Check, MapTrifold, FlagCheckered } from '@phosphor-icons/react'
+import { HeroBanner } from '@/components/graphics/HeroBanner'
+import { StepConnector } from '@/components/graphics/StepConnector'
+import { DecorativePattern } from '@/components/graphics/DecorativePattern'
 
 export function RoadmapPage() {
   const { t } = useI18n()
@@ -63,9 +66,11 @@ export function RoadmapPage() {
       <GCBreadcrumbs items={[{ label: t.roadmap.breadcrumb }]} />
       <main id="main-content" className="py-12">
         <GCContainer>
-          <h1 className="text-4xl font-bold text-primary mb-8">
-            {t.roadmap.title}
-          </h1>
+          <HeroBanner
+            title={t.roadmap.title}
+            variant="gradient"
+            icon={<MapTrifold size={48} weight="fill" />}
+          />
 
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -108,26 +113,34 @@ export function RoadmapPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              {t.roadmap.outcomes_title}
-            </h2>
-            <p className="text-lg text-foreground leading-relaxed mb-8">
-              {t.roadmap.outcomes_intro}
-            </p>
+            <div className="relative">
+              <DecorativePattern type="circuit" className="text-primary" opacity={0.03} />
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-4">
+                  <FlagCheckered size={32} weight="fill" className="text-accent" />
+                  <h2 className="text-3xl font-bold text-foreground">
+                    {t.roadmap.outcomes_title}
+                  </h2>
+                </div>
+                <p className="text-lg text-foreground leading-relaxed mb-8">
+                  {t.roadmap.outcomes_intro}
+                </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {outcomes.map((outcome, index) => (
-                <GCCard key={index} variant="elevated">
-                  <GCCardHeader>
-                    <GCCardTitle>{outcome.title}</GCCardTitle>
-                  </GCCardHeader>
-                  <GCCardContent>
-                    <p className="text-foreground leading-relaxed">
-                      {outcome.desc}
-                    </p>
-                  </GCCardContent>
-                </GCCard>
-              ))}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {outcomes.map((outcome, index) => (
+                    <GCCard key={index} variant="elevated">
+                      <GCCardHeader>
+                        <GCCardTitle>{outcome.title}</GCCardTitle>
+                      </GCCardHeader>
+                      <GCCardContent>
+                        <p className="text-foreground leading-relaxed">
+                          {outcome.desc}
+                        </p>
+                      </GCCardContent>
+                    </GCCard>
+                  ))}
+                </div>
+              </div>
             </div>
           </section>
 

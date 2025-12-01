@@ -3,7 +3,9 @@ import { GCContainer } from '@/components/gc/GCContainer'
 import { GCBreadcrumbs } from '@/components/gc/GCBreadcrumbs'
 import { GCStepper } from '@/components/gc/GCUtils'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardContent } from '@/components/gc/GCCard'
-import { Check } from '@phosphor-icons/react'
+import { Check, FlowArrow } from '@phosphor-icons/react'
+import { HeroBanner } from '@/components/graphics/HeroBanner'
+import { IllustrationAI } from '@/components/graphics/IllustrationAI'
 
 export function HowItWorksPage() {
   const { t } = useI18n()
@@ -44,13 +46,16 @@ export function HowItWorksPage() {
       <GCBreadcrumbs items={[{ label: t.workflow.breadcrumb }]} />
       <main id="main-content" className="py-12">
         <GCContainer>
-          <h1 className="text-4xl font-bold text-primary mb-8">
-            {t.workflow.title}
-          </h1>
+          <HeroBanner
+            title={t.workflow.title}
+            description={t.workflow.intro}
+            variant="default"
+            icon={<FlowArrow size={48} weight="fill" />}
+          />
 
-          <p className="text-lg text-foreground leading-relaxed mb-12">
-            {t.workflow.intro}
-          </p>
+          <div className="flex justify-center my-12">
+            <IllustrationAI variant="workflow" className="w-48 h-48" />
+          </div>
 
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-foreground mb-8">
