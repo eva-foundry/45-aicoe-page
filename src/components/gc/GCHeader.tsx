@@ -3,7 +3,7 @@ import { useI18n } from '@/i18n/I18nContext'
 import { GCContainer } from './GCContainer'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { CanadaWordmark, LogoAI } from '@/components/graphics'
+import { CanadaWordmark, ESDCLogo } from '@/components/graphics'
 
 export function GCHeader() {
   const { language, setLanguage, t } = useI18n()
@@ -43,22 +43,8 @@ export function GCHeader() {
       <div className="bg-background py-4">
         <GCContainer>
           <div className="flex flex-col gap-4">
-            <Link to="/" className="flex items-center gap-4 group">
-              <LogoAI size="lg" className="text-primary group-hover:text-accent transition-colors" />
-              <div className="flex flex-col gap-1">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-[2rem] font-bold text-[#2E5C8A] leading-none">ESDC</span>
-                </div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-[2rem] font-bold text-[#2E5C8A] leading-none">Virtual</span>
-                </div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-[2rem] font-bold text-[#2E5C8A] leading-none">Assistant</span>
-                </div>
-                <div className="text-xs text-muted-foreground font-semibold mt-1">
-                  Employment and Social Development Canada
-                </div>
-              </div>
+            <Link to="/" className="flex items-center group">
+              <ESDCLogo size="lg" className="group-hover:opacity-80 transition-opacity" />
             </Link>
             
             <nav aria-label="Main navigation" className="border-t border-border pt-4">
