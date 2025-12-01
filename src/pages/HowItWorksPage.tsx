@@ -4,8 +4,7 @@ import { GCBreadcrumbs } from '@/components/gc/GCBreadcrumbs'
 import { GCStepper } from '@/components/gc/GCUtils'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardContent } from '@/components/gc/GCCard'
 import { Check, FlowArrow } from '@phosphor-icons/react'
-import { HeroBanner } from '@/components/graphics/HeroBanner'
-import { IllustrationAI } from '@/components/graphics/IllustrationAI'
+import { HeroBanner, IllustrationTech, DataVisualization, FeatureIcon } from '@/components/graphics'
 
 export function HowItWorksPage() {
   const { t } = useI18n()
@@ -53,8 +52,26 @@ export function HowItWorksPage() {
             icon={<FlowArrow size={48} weight="fill" />}
           />
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
+            <div className="flex flex-col items-center text-center p-6 bg-card rounded-lg border border-border">
+              <FeatureIcon type="prompt" className="text-accent mb-4" />
+              <h3 className="font-bold text-foreground mb-2">Prompt Services</h3>
+              <p className="text-sm text-muted-foreground">Curated prompts and templates</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-6 bg-card rounded-lg border border-border">
+              <FeatureIcon type="workflow" className="text-accent mb-4" />
+              <h3 className="font-bold text-foreground mb-2">Workflow Automation</h3>
+              <p className="text-sm text-muted-foreground">Streamlined approval process</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-6 bg-card rounded-lg border border-border">
+              <FeatureIcon type="support" className="text-accent mb-4" />
+              <h3 className="font-bold text-foreground mb-2">Expert Support</h3>
+              <p className="text-sm text-muted-foreground">Tiered assistance levels</p>
+            </div>
+          </div>
+
           <div className="flex justify-center my-12">
-            <IllustrationAI variant="workflow" className="w-48 h-48" />
+            <IllustrationTech variant="automation" className="w-64 h-64" />
           </div>
 
           <section className="mb-16">

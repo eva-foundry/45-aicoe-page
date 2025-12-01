@@ -4,6 +4,7 @@ import { GCBreadcrumbs } from '@/components/gc/GCBreadcrumbs'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardContent } from '@/components/gc/GCCard'
 import { GCNotice } from '@/components/gc/GCUtils'
 import { Check, ArrowRight } from '@phosphor-icons/react'
+import { HeroBanner, FeatureIcon, ProcessDiagram, IllustrationTech } from '@/components/graphics'
 
 export function IntakeOptimizationPage() {
   const { t } = useI18n()
@@ -13,13 +14,16 @@ export function IntakeOptimizationPage() {
       <GCBreadcrumbs items={[{ label: t.intake.breadcrumb }]} />
       <main id="main-content" className="py-12">
         <GCContainer>
-          <h1 className="text-4xl font-bold text-primary mb-8">
-            {t.intake.title}
-          </h1>
+          <HeroBanner
+            title={t.intake.title}
+            description={t.intake.intro}
+            variant="default"
+            icon={<FeatureIcon type="workflow" className="text-primary w-12 h-12" />}
+          />
 
-          <p className="text-lg text-foreground leading-relaxed mb-12">
-            {t.intake.intro}
-          </p>
+          <div className="my-12 flex justify-center">
+            <IllustrationTech variant="automation" className="w-64 h-64 text-accent opacity-30" />
+          </div>
 
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-8">

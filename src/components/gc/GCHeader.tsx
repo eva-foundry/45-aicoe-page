@@ -3,7 +3,7 @@ import { useI18n } from '@/i18n/I18nContext'
 import { GCContainer } from './GCContainer'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { CanadaWordmark } from '@/components/graphics/CanadaWordmark'
+import { CanadaWordmark, LogoAI } from '@/components/graphics'
 
 export function GCHeader() {
   const { language, setLanguage, t } = useI18n()
@@ -43,9 +43,15 @@ export function GCHeader() {
       <div className="bg-background py-4">
         <GCContainer>
           <div className="flex flex-col gap-4">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="text-2xl font-bold text-primary">
-                {t.home.title}
+            <Link to="/" className="flex items-center gap-3 group">
+              <LogoAI size="md" className="text-primary group-hover:text-accent transition-colors" />
+              <div className="flex flex-col">
+                <div className="text-2xl font-bold text-primary group-hover:text-accent transition-colors">
+                  {t.home.title}
+                </div>
+                <div className="text-xs text-muted-foreground font-semibold">
+                  Employment and Social Development Canada
+                </div>
               </div>
             </Link>
             

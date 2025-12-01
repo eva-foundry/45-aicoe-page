@@ -4,8 +4,7 @@ import { GCBreadcrumbs } from '@/components/gc/GCBreadcrumbs'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardContent } from '@/components/gc/GCCard'
 import { GCNotice } from '@/components/gc/GCUtils'
 import { Check, Envelope, UsersFour, ChatCircleDots } from '@phosphor-icons/react'
-import { HeroBanner } from '@/components/graphics/HeroBanner'
-import { IconCard } from '@/components/graphics/IconCard'
+import { HeroBanner, IconCard, FeatureIcon } from '@/components/graphics'
 
 export function ContactPage() {
   const { t } = useI18n()
@@ -24,19 +23,19 @@ export function ContactPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <IconCard
-              icon={<UsersFour size={32} weight="fill" />}
+              icon={<FeatureIcon type="support" className="text-primary" />}
               title="Tiered Support"
               description="Choose the right level of support for your project needs"
               variant="primary"
             />
             <IconCard
-              icon={<ChatCircleDots size={32} weight="fill" />}
+              icon={<FeatureIcon type="training" className="text-primary" />}
               title="Expert Guidance"
               description="Get help from AI specialists and workflow experts"
               variant="primary"
             />
             <IconCard
-              icon={<Check size={32} weight="fill" />}
+              icon={<FeatureIcon type="speed" className="text-primary" />}
               title="Quick Response"
               description="We'll help you get started on your AI journey"
               variant="primary"

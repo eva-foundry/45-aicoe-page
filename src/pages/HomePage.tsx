@@ -4,10 +4,7 @@ import { GCContainer } from '@/components/gc/GCContainer'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardContent } from '@/components/gc/GCCard'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Sparkle, Users, Lightbulb, Rocket } from '@phosphor-icons/react'
-import { HeroBanner } from '@/components/graphics/HeroBanner'
-import { IconCard } from '@/components/graphics/IconCard'
-import { IllustrationAI } from '@/components/graphics/IllustrationAI'
-import { DecorativePattern } from '@/components/graphics/DecorativePattern'
+import { HeroBanner, IconCard, IllustrationAI, DecorativePattern, BannerGraphic, FeatureIcon, DataVisualization } from '@/components/graphics'
 
 export function HomePage() {
   const { t } = useI18n()
@@ -15,30 +12,34 @@ export function HomePage() {
   return (
     <main id="main-content" className="py-12">
       <GCContainer>
-        <HeroBanner
-          title={t.home.title}
-          subtitle={t.home.subtitle}
-          description={t.home.hero_text}
-          variant="pattern"
-          icon={<Sparkle size={48} weight="fill" />}
-          className="mb-12"
-        />
+        <div className="relative mb-12">
+          <div className="absolute inset-0 -z-10">
+            <BannerGraphic variant="gradient-mesh" className="h-full opacity-30" />
+          </div>
+          <HeroBanner
+            title={t.home.title}
+            subtitle={t.home.subtitle}
+            description={t.home.hero_text}
+            variant="pattern"
+            icon={<Sparkle size={48} weight="fill" />}
+          />
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <IconCard
-            icon={<Lightbulb size={32} weight="fill" />}
+            icon={<FeatureIcon type="innovation" className="text-accent" />}
             title="AI-Powered Innovation"
             description="Leverage cutting-edge AI tools to transform how ESDC employees work"
             variant="accent"
           />
           <IconCard
-            icon={<Users size={32} weight="fill" />}
+            icon={<FeatureIcon type="collaboration" className="text-accent" />}
             title="Collaborative Support"
             description="Expert guidance and tiered support for every level of complexity"
             variant="accent"
           />
           <IconCard
-            icon={<Rocket size={32} weight="fill" />}
+            icon={<FeatureIcon type="deployment" className="text-accent" />}
             title="Rapid Deployment"
             description="Streamlined workflows to get your AI solutions into production faster"
             variant="accent"
@@ -132,7 +133,16 @@ export function HomePage() {
           </div>
         </div>
 
-        <div className="mt-16 flex justify-center">
+        <div className="mt-16 bg-gradient-to-br from-accent/5 to-primary/5 rounded-lg p-8">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+            Our Impact
+          </h2>
+          <div className="flex justify-center">
+            <DataVisualization type="success-metrics" className="text-accent max-w-2xl" />
+          </div>
+        </div>
+
+        <div className="mt-12 flex justify-center">
           <IllustrationAI variant="collaboration" className="w-64 h-64 opacity-20" />
         </div>
       </GCContainer>

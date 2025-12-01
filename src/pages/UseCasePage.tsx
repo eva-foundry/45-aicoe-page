@@ -6,6 +6,7 @@ import { GCCard, GCCardHeader, GCCardTitle, GCCardSubtitle, GCCardContent } from
 import { GCNotice } from '@/components/gc/GCUtils'
 import { Check, X, CaretDown, CaretUp } from '@phosphor-icons/react'
 import { Button } from '@/components/ui/button'
+import { HeroBanner, FeatureIcon, IllustrationTech } from '@/components/graphics'
 
 export function UseCasePage() {
   const { t } = useI18n()
@@ -97,9 +98,15 @@ export function UseCasePage() {
       <GCBreadcrumbs items={[{ label: t.useCase.breadcrumb }]} />
       <main id="main-content" className="py-12">
         <GCContainer>
-          <h1 className="text-4xl font-bold text-primary mb-8">
-            {t.useCase.title}
-          </h1>
+          <HeroBanner
+            title={t.useCase.title}
+            variant="pattern"
+            icon={<FeatureIcon type="deployment" className="text-white w-12 h-12" />}
+          />
+
+          <div className="my-12 flex justify-center">
+            <IllustrationTech variant="cloud" className="w-56 h-56 text-accent opacity-25" />
+          </div>
 
           <section className="mb-12">
             <GCCard variant="bordered" className="border-destructive/30 bg-destructive/5">

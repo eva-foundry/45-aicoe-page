@@ -2,13 +2,150 @@
 
 This directory contains all graphic components, icons, illustrations, and visual assets for the AI Centre of Enablement website.
 
-## Components
+## 🎨 New Enhanced Graphics (v0.85)
+
+### IllustrationTech
+Advanced technical illustrations for enterprise systems.
+
+```tsx
+import { IllustrationTech } from '@/components/graphics'
+
+<IllustrationTech 
+  variant="server" // 'server' | 'cloud' | 'security' | 'analytics' | 'automation' | 'integration'
+  className="w-64 h-64 text-accent"
+/>
+```
+
+**Variants:**
+- `server`: Data center servers with status indicators
+- `cloud`: Cloud computing with data flow
+- `security`: Shield with lock icon
+- `analytics`: Bar chart with trend line
+- `automation`: Gear system with connections
+- `integration`: Hub-and-spoke connectivity diagram
+
+### BannerGraphic
+Full-width decorative backgrounds for hero sections.
+
+```tsx
+import { BannerGraphic } from '@/components/graphics'
+
+<div className="relative">
+  <div className="absolute inset-0">
+    <BannerGraphic variant="gradient-mesh" className="h-full opacity-30" />
+  </div>
+  <div className="relative z-10">
+    {/* Your content */}
+  </div>
+</div>
+```
+
+**Variants:**
+- `hero`: Abstract shapes and particles
+- `wave`: Flowing wave patterns
+- `geometric`: Angular shapes and lines
+- `particles`: Connected dot network
+- `gradient-mesh`: Soft gradient blobs with grid
+
+### FeatureIcon
+Professional feature icons (64x64px SVG).
+
+```tsx
+import { FeatureIcon } from '@/components/graphics'
+
+<FeatureIcon 
+  type="prompt" // See types below
+  className="text-accent"
+/>
+```
+
+**Available Types:**
+- `prompt`: Document with AI enhancement
+- `workflow`: Process flow diagram
+- `support`: Multi-user support
+- `security`: Shield with checkmark
+- `speed`: Speedometer with motion lines
+- `innovation`: Light bulb with rays
+- `collaboration`: Connected users
+- `training`: Document with bookmark
+- `deployment`: Upload arrow to platform
+- `monitoring`: Analytics dashboard
+
+### GovernmentBadge
+Official government branding badges.
+
+```tsx
+import { GovernmentBadge } from '@/components/graphics'
+
+<GovernmentBadge variant="esdc" />
+<GovernmentBadge variant="canada" />
+<GovernmentBadge variant="official" />
+```
+
+**Variants:**
+- `esdc`: Employment and Social Development Canada badge
+- `canada`: Canada flag emblem
+- `official`: Official certification badge
+
+### DataVisualization
+Charts and data diagrams.
+
+```tsx
+import { DataVisualization } from '@/components/graphics'
+
+<DataVisualization 
+  type="progress-timeline"
+  className="text-accent"
+/>
+```
+
+**Types:**
+- `progress-timeline`: Horizontal process tracker
+- `tier-comparison`: Bar chart comparing 3 tiers
+- `success-metrics`: Line graph with trend
+- `workflow-funnel`: Conversion funnel diagram
+
+### ProcessDiagram
+Interactive step-by-step process visualizer.
+
+```tsx
+import { ProcessDiagram } from '@/components/graphics'
+
+<ProcessDiagram 
+  steps={[
+    { label: "Submit", status: "complete" },
+    { label: "Review", status: "active" },
+    { label: "Deploy", status: "pending" }
+  ]}
+  orientation="horizontal" // or 'vertical'
+/>
+```
+
+**Features:**
+- Status indicators (complete/active/pending)
+- Custom icons per step
+- Horizontal or vertical layouts
+- Responsive design
+
+### LogoAI
+AI Centre of Enablement logo component.
+
+```tsx
+import { LogoAI } from '@/components/graphics'
+
+<LogoAI 
+  variant="full"  // 'full' | 'icon' | 'text'
+  size="md"       // 'sm' | 'md' | 'lg'
+/>
+```
+
+## 📦 Existing Components
 
 ### CanadaWordmark
 Government of Canada official wordmark with maple leaf symbol.
 
 ```tsx
-import { CanadaWordmark } from '@/components/graphics/CanadaWordmark'
+import { CanadaWordmark } from '@/components/graphics'
 
 <CanadaWordmark />
 ```
@@ -17,7 +154,7 @@ import { CanadaWordmark } from '@/components/graphics/CanadaWordmark'
 Large hero section with title, subtitle, description, and optional icon.
 
 ```tsx
-import { HeroBanner } from '@/components/graphics/HeroBanner'
+import { HeroBanner } from '@/components/graphics'
 import { Sparkle } from '@phosphor-icons/react'
 
 <HeroBanner
@@ -38,7 +175,7 @@ import { Sparkle } from '@phosphor-icons/react'
 Feature card with icon, title, and description.
 
 ```tsx
-import { IconCard } from '@/components/graphics/IconCard'
+import { IconCard } from '@/components/graphics'
 import { Lightbulb } from '@phosphor-icons/react'
 
 <IconCard
@@ -58,7 +195,7 @@ import { Lightbulb } from '@phosphor-icons/react'
 Background pattern overlays for visual interest.
 
 ```tsx
-import { DecorativePattern } from '@/components/graphics/DecorativePattern'
+import { DecorativePattern } from '@/components/graphics'
 
 <div className="relative">
   <DecorativePattern 
@@ -82,7 +219,7 @@ import { DecorativePattern } from '@/components/graphics/DecorativePattern'
 AI-themed abstract illustrations.
 
 ```tsx
-import { IllustrationAI } from '@/components/graphics/IllustrationAI'
+import { IllustrationAI } from '@/components/graphics'
 
 <IllustrationAI 
   variant="brain" // 'brain' | 'network' | 'workflow' | 'collaboration'
@@ -100,7 +237,7 @@ import { IllustrationAI } from '@/components/graphics/IllustrationAI'
 Badge component for service tier identification.
 
 ```tsx
-import { ServiceTierBadge } from '@/components/graphics/ServiceTierBadge'
+import { ServiceTierBadge } from '@/components/graphics'
 
 <ServiceTierBadge 
   tier={1} // 1 | 2 | 3
@@ -117,13 +254,96 @@ import { ServiceTierBadge } from '@/components/graphics/ServiceTierBadge'
 Visual connector for step-based layouts.
 
 ```tsx
-import { StepConnector } from '@/components/graphics/StepConnector'
+import { StepConnector } from '@/components/graphics'
 
 <StepConnector 
   orientation="vertical" // 'vertical' | 'horizontal'
   variant="solid" // 'solid' | 'dashed' | 'dotted'
 />
 ```
+
+## 🎯 Usage Best Practices
+
+### Hero Sections
+```tsx
+<div className="relative mb-12">
+  <div className="absolute inset-0 -z-10">
+    <BannerGraphic variant="gradient-mesh" className="h-full opacity-30" />
+  </div>
+  <HeroBanner
+    title="AI Centre of Enablement"
+    subtitle="Transform Your Workflows"
+    variant="pattern"
+    icon={<FeatureIcon type="innovation" />}
+  />
+</div>
+```
+
+### Feature Grids
+```tsx
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <IconCard
+    icon={<FeatureIcon type="security" className="text-accent" />}
+    title="Enterprise Security"
+    description="Built-in security and compliance"
+    variant="accent"
+  />
+  {/* More cards */}
+</div>
+```
+
+### Process Visualization
+```tsx
+<ProcessDiagram 
+  steps={[
+    { label: "Phase 1", icon: <FeatureIcon type="prompt" />, status: "complete" },
+    { label: "Phase 2", icon: <FeatureIcon type="workflow" />, status: "active" },
+    { label: "Phase 3", icon: <FeatureIcon type="deployment" />, status: "pending" },
+  ]}
+/>
+```
+
+### Data Presentations
+```tsx
+<div className="bg-card rounded-lg p-8">
+  <h3 className="text-xl font-bold mb-6">Service Comparison</h3>
+  <DataVisualization type="tier-comparison" className="text-accent" />
+</div>
+```
+
+## 🎨 Design Guidelines
+
+### Color Usage
+- **Accent**: Primary interactive elements, highlights
+- **Primary**: Headers, important elements
+- **Muted**: Background patterns, subtle elements
+
+### Opacity Levels
+- **0.05-0.1**: Background patterns
+- **0.2-0.3**: Decorative illustrations  
+- **0.6-0.8**: Icons in cards
+- **1.0**: Primary icons and graphics
+
+### Sizing
+- Small icons: `w-8 h-8` to `w-12 h-12`
+- Feature icons: `w-16 h-16`
+- Illustrations: `w-48 h-48` to `w-64 h-64`
+- Banner graphics: Full width with `h-full`
+
+## ♿ Accessibility
+
+All graphics components follow accessibility best practices:
+- SVGs include proper `aria-label` attributes where needed
+- Color combinations meet WCAG AA contrast requirements
+- Decorative elements use `aria-hidden` where appropriate
+- Focus states are visible and clear
+
+## ⚡ Performance
+
+- All graphics are inline SVGs (no external requests)
+- Patterns use CSS patterns for efficiency
+- Illustrations are optimized for minimal DOM nodes
+- Tree-shakeable imports for optimal bundle size
 
 ## Icons
 

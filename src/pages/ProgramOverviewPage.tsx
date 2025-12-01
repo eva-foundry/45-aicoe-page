@@ -3,9 +3,7 @@ import { GCContainer } from '@/components/gc/GCContainer'
 import { GCBreadcrumbs } from '@/components/gc/GCBreadcrumbs'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardContent } from '@/components/gc/GCCard'
 import { Check, Target, Warning } from '@phosphor-icons/react'
-import { HeroBanner } from '@/components/graphics/HeroBanner'
-import { DecorativePattern } from '@/components/graphics/DecorativePattern'
-import { IllustrationAI } from '@/components/graphics/IllustrationAI'
+import { HeroBanner, DecorativePattern, IllustrationTech, FeatureIcon } from '@/components/graphics'
 
 export function ProgramOverviewPage() {
   const { t } = useI18n()
@@ -21,8 +19,27 @@ export function ProgramOverviewPage() {
             icon={<Target size={48} weight="fill" />}
           />
 
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 my-12">
+            <div className="flex flex-col items-center text-center p-4">
+              <FeatureIcon type="innovation" className="text-accent mb-3" />
+              <h3 className="text-sm font-bold">Innovation</h3>
+            </div>
+            <div className="flex flex-col items-center text-center p-4">
+              <FeatureIcon type="security" className="text-accent mb-3" />
+              <h3 className="text-sm font-bold">Security</h3>
+            </div>
+            <div className="flex flex-col items-center text-center p-4">
+              <FeatureIcon type="speed" className="text-accent mb-3" />
+              <h3 className="text-sm font-bold">Efficiency</h3>
+            </div>
+            <div className="flex flex-col items-center text-center p-4">
+              <FeatureIcon type="training" className="text-accent mb-3" />
+              <h3 className="text-sm font-bold">Training</h3>
+            </div>
+          </div>
+
           <div className="flex justify-center mb-12">
-            <IllustrationAI variant="brain" className="w-48 h-48 opacity-20" />
+            <IllustrationTech variant="integration" className="w-56 h-56 opacity-20" />
           </div>
 
           <section className="mb-12">

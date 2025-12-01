@@ -3,8 +3,7 @@ import { GCContainer } from '@/components/gc/GCContainer'
 import { GCBreadcrumbs } from '@/components/gc/GCBreadcrumbs'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardSubtitle, GCCardContent } from '@/components/gc/GCCard'
 import { Check, Lightbulb, Stack } from '@phosphor-icons/react'
-import { HeroBanner } from '@/components/graphics/HeroBanner'
-import { ServiceTierBadge } from '@/components/graphics/ServiceTierBadge'
+import { HeroBanner, ServiceTierBadge, DataVisualization, FeatureIcon } from '@/components/graphics'
 
 export function ServicesPage() {
   const { t } = useI18n()
@@ -20,6 +19,13 @@ export function ServicesPage() {
             variant="gradient"
             icon={<Stack size={48} weight="fill" />}
           />
+
+          <div className="my-12 bg-card rounded-lg p-8 border border-border">
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+              Service Tier Comparison
+            </h2>
+            <DataVisualization type="tier-comparison" className="text-accent" />
+          </div>
 
           <div className="space-y-8">
             <GCCard variant="elevated" className="border-2 border-accent">

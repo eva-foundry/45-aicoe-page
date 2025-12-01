@@ -4,9 +4,7 @@ import { GCBreadcrumbs } from '@/components/gc/GCBreadcrumbs'
 import { GCStepper } from '@/components/gc/GCUtils'
 import { GCCard, GCCardHeader, GCCardTitle, GCCardContent } from '@/components/gc/GCCard'
 import { Check, MapTrifold, FlagCheckered } from '@phosphor-icons/react'
-import { HeroBanner } from '@/components/graphics/HeroBanner'
-import { StepConnector } from '@/components/graphics/StepConnector'
-import { DecorativePattern } from '@/components/graphics/DecorativePattern'
+import { HeroBanner, StepConnector, DecorativePattern, DataVisualization, ProcessDiagram } from '@/components/graphics'
 
 export function RoadmapPage() {
   const { t } = useI18n()
@@ -71,6 +69,17 @@ export function RoadmapPage() {
             variant="gradient"
             icon={<MapTrifold size={48} weight="fill" />}
           />
+
+          <div className="my-12">
+            <ProcessDiagram 
+              steps={[
+                { label: phases[0].title.split(' - ')[0], status: 'complete' },
+                { label: phases[1].title.split(' - ')[0], status: 'active' },
+                { label: phases[2].title.split(' - ')[0], status: 'pending' },
+              ]}
+              orientation="horizontal"
+            />
+          </div>
 
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-foreground mb-4">
