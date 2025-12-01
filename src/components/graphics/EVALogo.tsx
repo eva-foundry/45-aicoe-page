@@ -1,28 +1,28 @@
 import { cn } from '@/lib/utils'
 
-interface LogoAIProps {
+interface EVALogoProps {
   className?: string
-  variant?: 'full' | 'icon' | 'text'
+  variant?: 'full' | 'icon' | 'compact'
   size?: 'sm' | 'md' | 'lg'
 }
 
-export function LogoAI({ className, variant = 'full', size = 'md' }: LogoAIProps) {
+export function EVALogo({ className, variant = 'full', size = 'md' }: EVALogoProps) {
   const sizeMap = {
-    sm: { width: 80, height: 80 },
-    md: { width: 120, height: 120 },
-    lg: { width: 160, height: 160 }
+    sm: { iconWidth: 60, iconHeight: 60, textSize: 'text-sm' },
+    md: { iconWidth: 90, iconHeight: 90, textSize: 'text-base' },
+    lg: { iconWidth: 120, iconHeight: 120, textSize: 'text-lg' }
   }
 
   const dimensions = sizeMap[size]
 
   const iconElement = (
     <svg 
-      width={dimensions.width} 
-      height={dimensions.height} 
+      width={dimensions.iconWidth} 
+      height={dimensions.iconHeight} 
       viewBox="0 0 140 120" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
-      aria-label="ESDC Virtual Assistant"
+      aria-label="EVA - ESDC Virtual Assistant"
     >
       <circle cx="12" cy="85" r="5" fill="#8B4789" />
       <circle cx="28" cy="48" r="5" fill="#8B4789" />
@@ -57,17 +57,29 @@ export function LogoAI({ className, variant = 'full', size = 'md' }: LogoAIProps
     return <div className={className}>{iconElement}</div>
   }
 
-  if (variant === 'text') {
+  if (variant === 'compact') {
     return (
       <div className={cn('flex items-center gap-2', className)}>
-        <span className="text-2xl font-bold">ESDC Virtual Assistant</span>
+        <div className="scale-75">{iconElement}</div>
+        <span className={cn('font-bold text-primary', dimensions.textSize)}>EVA</span>
       </div>
     )
   }
 
   return (
-    <div className={cn('flex items-center gap-3', className)}>
+    <div className={cn('flex items-center gap-4', className)}>
       {iconElement}
+      <div className="flex flex-col">
+        <span className={cn('font-bold text-primary leading-tight', dimensions.textSize, size === 'lg' ? 'text-2xl' : size === 'md' ? 'text-xl' : 'text-base')}>
+          ESDC
+        </span>
+        <span className={cn('font-bold text-primary leading-tight', dimensions.textSize, size === 'lg' ? 'text-2xl' : size === 'md' ? 'text-xl' : 'text-base')}>
+          Virtual
+        </span>
+        <span className={cn('font-bold text-primary leading-tight', dimensions.textSize, size === 'lg' ? 'text-2xl' : size === 'md' ? 'text-xl' : 'text-base')}>
+          Assistant
+        </span>
+      </div>
     </div>
   )
 }
