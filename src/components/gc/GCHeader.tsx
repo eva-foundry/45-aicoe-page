@@ -43,13 +43,19 @@ export function GCHeader() {
       <div className="bg-background py-4">
         <GCContainer>
           <div className="flex flex-col gap-4">
-            <Link to="/" className="flex items-center gap-3 group">
-              <LogoAI size="md" className="text-primary group-hover:text-accent transition-colors" />
-              <div className="flex flex-col">
-                <div className="text-2xl font-bold text-primary group-hover:text-accent transition-colors">
-                  {t.home.title}
+            <Link to="/" className="flex items-center gap-4 group">
+              <LogoAI size="lg" className="text-primary group-hover:text-accent transition-colors" />
+              <div className="flex flex-col gap-1">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-[2rem] font-bold text-[#2E5C8A] leading-none">ESDC</span>
                 </div>
-                <div className="text-xs text-muted-foreground font-semibold">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-[2rem] font-bold text-[#2E5C8A] leading-none">Virtual</span>
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-[2rem] font-bold text-[#2E5C8A] leading-none">Assistant</span>
+                </div>
+                <div className="text-xs text-muted-foreground font-semibold mt-1">
                   Employment and Social Development Canada
                 </div>
               </div>

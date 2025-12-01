@@ -8,23 +8,24 @@ export function CanadaWordmark() {
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Government of Canada"
     >
+      <g transform="translate(0, 6)">
+        <path
+          d="M8 9 L9 7 L8.5 6 L9.5 5.5 L9 4 L10 3.5 L11 0 L12 3.5 L13 4 L12.5 5.5 L13.5 6 L13 7 L14 9 L12 8.5 L12 11 L11 10 L10 10 L10 11 L8 8.5 Z"
+          fill="currentColor"
+          transform="translate(100, 0)"
+        />
+      </g>
       <text 
         x="0" 
         y="20" 
-        fontFamily="Arial, sans-serif" 
-        fontSize="18" 
-        fontWeight="700" 
+        fontFamily="'Noto Sans', Arial, sans-serif" 
+        fontSize="16" 
+        fontWeight="400" 
         fill="currentColor"
-        letterSpacing="0.5"
+        letterSpacing="1"
       >
         Canada
       </text>
-      <path 
-        d="M112 8 L115 2 L118 8 L112 8 Z M115 2 L115 0" 
-        stroke="currentColor" 
-        strokeWidth="1.5" 
-        fill="currentColor"
-      />
     </svg>
   )
 }
