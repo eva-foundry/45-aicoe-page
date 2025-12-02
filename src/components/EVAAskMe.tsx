@@ -9,7 +9,6 @@ import { X, PaperPlaneRight, Sparkle } from '@phosphor-icons/react'
 import { cn } from '@/lib/utils'
 import { motion, AnimatePresence } from 'framer-motion'
 import { findBestMatch, getCategoryKnowledge } from '@/lib/eva-knowledge-base'
-import { VirtualAssistantIcon } from '@/components/graphics'
 
 interface Message {
   id: string
@@ -275,10 +274,10 @@ export function EVAAskMe() {
               <Button
                 onClick={handleOpen}
                 size="lg"
-                className="h-20 w-20 rounded-xl shadow-lg hover:shadow-2xl bg-white hover:bg-white p-0 border-2 border-[#2B50A2] transition-shadow duration-200 overflow-hidden"
+                className="h-20 w-20 rounded-xl shadow-lg hover:shadow-2xl bg-white hover:bg-white px-2 border-2 border-[#2B50A2] transition-shadow duration-200 text-[#2B50A2] hover:text-[#2B50A2] font-semibold text-xs leading-tight"
                 aria-label={language === 'en' ? 'Open EVA AskMe assistant' : 'Ouvrir l\'assistant EVA AskMe'}
               >
-                <VirtualAssistantIcon size={80} />
+                EVA AskMe
               </Button>
             </motion.div>
           </motion.div>
