@@ -5,10 +5,11 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Input } from '@/components/ui/input'
-import { X, ChatCircleDots, PaperPlaneRight, Sparkle } from '@phosphor-icons/react'
+import { X, PaperPlaneRight, Sparkle } from '@phosphor-icons/react'
 import { cn } from '@/lib/utils'
 import { motion, AnimatePresence } from 'framer-motion'
 import { findBestMatch, getCategoryKnowledge } from '@/lib/eva-knowledge-base'
+import { VirtualAssistantIcon } from '@/components/graphics'
 
 interface Message {
   id: string
@@ -265,10 +266,10 @@ export function EVAAskMe() {
             <Button
               onClick={handleOpen}
               size="lg"
-              className="h-14 w-14 rounded-full shadow-lg bg-accent hover:bg-accent/90 text-accent-foreground"
+              className="h-16 w-16 rounded-full shadow-lg bg-white hover:bg-white/95 p-0 border-2 border-[#2B50A2]"
               aria-label={language === 'en' ? 'Open EVA AskMe assistant' : 'Ouvrir l\'assistant EVA AskMe'}
             >
-              <ChatCircleDots size={28} weight="fill" />
+              <VirtualAssistantIcon size={56} />
             </Button>
           </motion.div>
         )}
