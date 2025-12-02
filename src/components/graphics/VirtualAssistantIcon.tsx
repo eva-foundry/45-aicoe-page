@@ -36,10 +36,10 @@ export function VirtualAssistantIcon({ className, size = 56 }: VirtualAssistantI
         </g>
       </g>
       
-      <text x="40" y="46" fontFamily="Inter, Arial, sans-serif" fontSize="11" fontWeight="bold" fill="#2B50A2" textAnchor="middle">
+      <text x="40" y="48" fontFamily="Inter, Arial, sans-serif" fontSize="14" fontWeight="bold" fill="#2B50A2" textAnchor="middle">
         EVA
       </text>
-      <text x="40" y="59" fontFamily="Inter, Arial, sans-serif" fontSize="11" fontWeight="bold" fill="#2B50A2" textAnchor="middle">
+      <text x="40" y="62" fontFamily="Inter, Arial, sans-serif" fontSize="14" fontWeight="bold" fill="#2B50A2" textAnchor="middle">
         AskMe
       </text>
     </svg>
