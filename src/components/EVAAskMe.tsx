@@ -294,7 +294,7 @@ export function EVAAskMe() {
             className="fixed bottom-6 right-6 z-50 w-[90vw] sm:w-96"
           >
             <Card className="shadow-2xl border-accent/20">
-              <CardHeader className="bg-red-600 text-white p-4 rounded-t-lg">
+              <CardHeader className="bg-red-800 text-white p-4 rounded-t-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <div className="bg-white/10 p-2 rounded-full">
