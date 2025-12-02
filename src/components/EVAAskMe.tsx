@@ -274,7 +274,7 @@ export function EVAAskMe() {
               <Button
                 onClick={handleOpen}
                 size="lg"
-                className="h-20 w-20 rounded-xl shadow-lg hover:shadow-2xl bg-white hover:bg-white px-2 border-2 border-[#2B50A2] transition-shadow duration-200 text-[#2B50A2] hover:text-[#2B50A2] font-semibold text-xs leading-tight"
+                className="h-20 w-20 rounded-xl shadow-lg hover:shadow-2xl bg-white hover:bg-white px-2 border-2 border-[#2B50A2] transition-shadow duration-200 text-red-600 hover:text-red-600 font-semibold text-base leading-tight whitespace-normal text-center flex items-center justify-center"
                 aria-label={language === 'en' ? 'Open EVA AskMe assistant' : 'Ouvrir l\'assistant EVA AskMe'}
               >
                 EVA AskMe
