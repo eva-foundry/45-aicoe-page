@@ -275,10 +275,10 @@ export function EVAAskMe() {
               <Button
                 onClick={handleOpen}
                 size="lg"
-                className="h-20 w-20 rounded-xl shadow-lg hover:shadow-2xl bg-white hover:bg-white p-2 border-2 border-[#2B50A2] transition-shadow duration-200"
+                className="h-20 w-20 rounded-xl shadow-lg hover:shadow-2xl bg-white hover:bg-white p-0 border-2 border-[#2B50A2] transition-shadow duration-200 overflow-hidden"
                 aria-label={language === 'en' ? 'Open EVA AskMe assistant' : 'Ouvrir l\'assistant EVA AskMe'}
               >
-                <VirtualAssistantIcon size={64} />
+                <VirtualAssistantIcon size={80} />
               </Button>
             </motion.div>
           </motion.div>
