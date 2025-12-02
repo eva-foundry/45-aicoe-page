@@ -54,6 +54,13 @@ A production-ready, bilingual website presenting ESDC IITB's AI CoE Prompt Servi
 - Progression: View timeline → understand phases → see activities → grasp timeline
 - Success criteria: Phases sequential, activities clear, realistic timeline
 
+**EVA AskMe Interactive Assistant**
+- Functionality: Floating AI assistant widget providing contextual help and guidance
+- Purpose: Help users navigate the portal, understand features, and get answers to common questions
+- Trigger: User clicks floating button in bottom-right corner (accessible on all pages)
+- Progression: Click button → chat window opens → user asks question or selects quick action → receives contextual answer → can ask follow-up questions → close when done
+- Success criteria: Provides relevant answers based on current page, answers common FAQs, offers quick actions for common queries, maintains conversation history during session
+
 ## Edge Case Handling
 
 - **Missing translations**: Fallback to English if French content unavailable
@@ -61,6 +68,9 @@ A production-ready, bilingual website presenting ESDC IITB's AI CoE Prompt Servi
 - **Keyboard-only navigation**: Full tab order through all interactive elements
 - **Screen reader use**: Semantic HTML with ARIA labels where needed
 - **No JavaScript**: Progressive enhancement ensures core content remains accessible
+- **EVA AskMe offline**: Widget gracefully handles questions without requiring external API calls by using predefined contextual responses
+- **Repeated questions**: EVA AskMe provides consistent, helpful answers and can direct users to relevant pages
+- **Widget on mobile**: Chat interface adapts to smaller screens (90vw width on mobile, fixed width on desktop)
 
 ## Design Direction
 
@@ -121,6 +131,7 @@ Animations should be minimal and functional, supporting usability without drawin
   - Service tier badges with distinctive icons
   - Decorative pattern overlays (dots, grid, waves, circuit)
   - AI-themed illustrations (brain, network, workflow, collaboration)
+  - EVA AskMe floating chat widget with contextual AI assistance
 
 - **Customizations**: 
   - Language switcher integrated into header
@@ -131,6 +142,8 @@ Animations should be minimal and functional, supporting usability without drawin
   - Icon card component with hover scale effects
   - Decorative background patterns for visual interest
   - Abstract AI illustrations for thematic reinforcement
+  - EVA AskMe floating assistant widget with contextual awareness and bilingual support
+  - Chat interface with message history, typing indicators, and quick action buttons
 
 - **Icon System**:
   - Phosphor Icons used consistently throughout

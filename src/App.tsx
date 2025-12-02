@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { I18nProvider } from './i18n/I18nContext'
 import { GCHeader } from './components/gc/GCHeader'
 import { GCFooter } from './components/gc/GCFooter'
+import { EVAAskMe } from './components/EVAAskMe'
 import { HomePage } from './pages/HomePage'
 import { ProgramOverviewPage } from './pages/ProgramOverviewPage'
 import { HowItWorksPage } from './pages/HowItWorksPage'
@@ -31,6 +32,7 @@ function App() {
             </Routes>
           </div>
           <GCFooter />
+          <EVAAskMe />
         </div>
       </BrowserRouter>
     </I18nProvider>
