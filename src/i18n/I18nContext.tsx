@@ -13,8 +13,12 @@ const I18nContext = createContext<I18nContextType | undefined>(undefined)
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useKV<Language>('language', 'en')
 
-  const currentLanguage = language || 'en'
+  const currentLanguage: Language = language || 'en'
   const t = translations[currentLanguage]
+
+  if (!t) {
+    return null
+  }
 
   return (
     <I18nContext.Provider value={{ language: currentLanguage, setLanguage, t }}>
