@@ -265,11 +265,9 @@ export function EVAAskMe() {
           >
             <motion.div
               whileHover={{ 
-                scale: 1.1,
-                rotate: [0, -3, 3, -3, 0],
+                scale: 1.05,
                 transition: { 
-                  scale: { duration: 0.2 },
-                  rotate: { duration: 0.5, ease: "easeInOut" }
+                  scale: { duration: 0.2 }
                 }
               }}
               whileTap={{ scale: 0.95 }}
@@ -277,10 +275,10 @@ export function EVAAskMe() {
               <Button
                 onClick={handleOpen}
                 size="lg"
-                className="h-16 w-16 rounded-full shadow-lg hover:shadow-2xl bg-white hover:bg-white p-0 border-2 border-[#2B50A2] transition-shadow duration-200"
+                className="h-20 w-20 rounded-xl shadow-lg hover:shadow-2xl bg-white hover:bg-white p-2 border-2 border-[#2B50A2] transition-shadow duration-200"
                 aria-label={language === 'en' ? 'Open EVA AskMe assistant' : 'Ouvrir l\'assistant EVA AskMe'}
               >
-                <VirtualAssistantIcon size={56} />
+                <VirtualAssistantIcon size={64} />
               </Button>
             </motion.div>
           </motion.div>
