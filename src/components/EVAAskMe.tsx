@@ -294,10 +294,10 @@ export function EVAAskMe() {
             className="fixed bottom-6 right-6 z-50 w-[90vw] sm:w-96"
           >
             <Card className="shadow-2xl border-accent/20">
-              <CardHeader className="bg-accent text-accent-foreground p-4 rounded-t-lg">
+              <CardHeader className="bg-red-600 text-white p-4 rounded-t-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="bg-accent-foreground/10 p-2 rounded-full">
+                    <div className="bg-white/10 p-2 rounded-full">
                       <Sparkle size={20} weight="fill" />
                     </div>
                     <CardTitle className="text-lg">
@@ -308,7 +308,7 @@ export function EVAAskMe() {
                     onClick={handleClose}
                     variant="ghost"
                     size="sm"
-                    className="h-8 w-8 p-0 hover:bg-accent-foreground/10 text-accent-foreground"
+                    className="h-8 w-8 p-0 hover:bg-white/10 text-white"
                     aria-label={language === 'en' ? 'Close' : 'Fermer'}
                   >
                     <X size={20} weight="bold" />
