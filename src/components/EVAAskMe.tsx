@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input'
 import { X, ChatCircleDots, PaperPlaneRight, Sparkle } from '@phosphor-icons/react'
 import { cn } from '@/lib/utils'
 import { motion, AnimatePresence } from 'framer-motion'
+import { findBestMatch, getCategoryKnowledge } from '@/lib/eva-knowledge-base'
 
 interface Message {
   id: string
@@ -66,66 +67,17 @@ export function EVAAskMe() {
   }
 
   const getContextualHelp = (userQuestion: string): string => {
-    const lowerQ = userQuestion.toLowerCase()
     const path = location.pathname
-
-    if (lowerQ.includes('prompt') || lowerQ.includes('edit') || lowerQ.includes('capability')) {
-      return language === 'en'
-        ? 'To add a new AI capability: 1) Start by exploring the "How It Works" page to understand our 7-step workflow. 2) Navigate to "Services & Tiers" to choose your support level. 3) Then visit "Contact" to submit your request. Our team will guide you through the prompt development process.'
-        : 'Pour ajouter une nouvelle capacité d\'IA: 1) Commencez par explorer la page "Comment ça fonctionne" pour comprendre notre flux de travail en 7 étapes. 2) Accédez à "Services et niveaux" pour choisir votre niveau de support. 3) Ensuite, visitez "Contact" pour soumettre votre demande. Notre équipe vous guidera tout au long du processus de développement de prompts.'
+    
+    const bestMatch = findBestMatch(userQuestion, language, path)
+    
+    if (bestMatch) {
+      return bestMatch
     }
-
-    if (lowerQ.includes('tier') || lowerQ.includes('support') || lowerQ.includes('service')) {
-      return language === 'en'
-        ? 'We offer three service tiers: 1) Self-Service (guides and templates), 2) Guided Support (collaborative development), and 3) Full Service (end-to-end development). Visit the "Services & Tiers" page to compare options and find the best fit for your needs.'
-        : 'Nous offrons trois niveaux de service: 1) Libre-service (guides et modèles), 2) Support guidé (développement collaboratif), et 3) Service complet (développement de bout en bout). Visitez la page "Services et niveaux" pour comparer les options et trouver la meilleure solution pour vos besoins.'
-    }
-
-    if (lowerQ.includes('workflow') || lowerQ.includes('process') || lowerQ.includes('steps')) {
-      return language === 'en'
-        ? 'Our AI workflow follows 7 key steps: Discover → Define Use Case → Select Tools → Design Prompts & Workflow → Test & Refine → Document & Share → Plan Next Steps. Click on "How It Works" in the navigation to see detailed information about each phase.'
-        : 'Notre flux de travail IA suit 7 étapes clés: Découvrir → Définir le cas d\'utilisation → Sélectionner les outils → Concevoir les prompts et le flux → Tester et affiner → Documenter et partager → Planifier les prochaines étapes. Cliquez sur "Comment ça fonctionne" dans la navigation pour voir des informations détaillées sur chaque phase.'
-    }
-
-    if (lowerQ.includes('start') || lowerQ.includes('begin') || lowerQ.includes('contact')) {
-      return language === 'en'
-        ? 'To get started: Visit our "Contact" page where you can reach out to our team. We recommend first reviewing the "Program Overview" to understand what we offer, then "How It Works" to see our process. Our team will help you identify the right service tier for your needs.'
-        : 'Pour commencer: Visitez notre page "Contact" où vous pouvez contacter notre équipe. Nous recommandons d\'abord de consulter l\'"Aperçu du programme" pour comprendre ce que nous offrons, puis "Comment ça fonctionne" pour voir notre processus. Notre équipe vous aidera à identifier le bon niveau de service pour vos besoins.'
-    }
-
-    if (lowerQ.includes('tool') || lowerQ.includes('eva') || lowerQ.includes('copilot')) {
-      return language === 'en'
-        ? 'We support ESDC-approved enterprise AI tools including EVA Chat (for document analysis and content generation) and Microsoft Copilot 365 (integrated across Microsoft apps). The right tool depends on your use case complexity. Visit "How It Works" to learn about tool selection in Step 3.'
-        : 'Nous supportons les outils d\'IA d\'entreprise approuvés par EDSC, notamment EVA Chat (pour l\'analyse de documents et la génération de contenu) et Microsoft Copilot 365 (intégré aux applications Microsoft). Le bon outil dépend de la complexité de votre cas d\'utilisation. Visitez "Comment ça fonctionne" pour en savoir plus sur la sélection d\'outils à l\'étape 3.'
-    }
-
-    if (lowerQ.includes('intake') || lowerQ.includes('optimize') || lowerQ.includes('submission')) {
-      return language === 'en'
-        ? 'Our Intake Optimization service helps improve your project submission before it reaches formal intake. We clarify scope, assess complexity, and ensure you\'re using the right tools. This increases approval rates and reduces rework. Check the "Intake Optimization" page for more details.'
-        : 'Notre service d\'optimisation de l\'admission aide à améliorer votre soumission de projet avant qu\'elle n\'atteigne l\'admission formelle. Nous clarifions la portée, évaluons la complexité et nous assurons que vous utilisez les bons outils. Cela augmente les taux d\'approbation et réduit le retravail. Consultez la page "Optimisation de l\'admission" pour plus de détails.'
-    }
-
-    if (path === '/program-overview') {
-      return language === 'en'
-        ? 'The Program Overview page explains our mission, goals, and how we help ESDC employees leverage AI effectively. Key benefits include structured support, improved AI literacy, and access to early advisory services. Would you like to know about specific aspects of the program?'
-        : 'La page Aperçu du programme explique notre mission, nos objectifs et comment nous aidons les employés d\'EDSC à exploiter efficacement l\'IA. Les avantages clés incluent un soutien structuré, une amélioration de la littératie en IA et l\'accès à des services consultatifs précoces. Souhaitez-vous en savoir plus sur des aspects spécifiques du programme?'
-    }
-
-    if (path === '/use-case') {
-      return language === 'en'
-        ? 'The SCORM to Storyboard use case demonstrates four solution approaches: Manual Prompts, Low-Code Workflow, Multi-Component Custom, and Integrated Platform. Each has different complexity, cost, and capabilities. I can explain the pros and cons of each option if you\'d like.'
-        : 'Le cas d\'utilisation SCORM vers Storyboard démontre quatre approches de solution: Prompts manuels, Flux de travail low-code, Multi-composants personnalisé et Plateforme intégrée. Chacun a une complexité, un coût et des capacités différents. Je peux expliquer les avantages et inconvénients de chaque option si vous le souhaitez.'
-    }
-
-    if (path === '/roadmap') {
-      return language === 'en'
-        ? 'Our roadmap includes three phases: Phase 1 (Pilot & Foundation) with early adopter programs, Phase 2 (Scale & Integration) with expanded service tiers, and Phase 3 (Optimization & Innovation) with advanced automation. Each phase builds on the previous one.'
-        : 'Notre feuille de route comprend trois phases: Phase 1 (Pilote et Fondation) avec des programmes d\'adopteurs précoces, Phase 2 (Échelle et Intégration) avec des niveaux de service élargis, et Phase 3 (Optimisation et Innovation) avec une automatisation avancée. Chaque phase s\'appuie sur la précédente.'
-    }
-
+    
     return language === 'en'
-      ? 'I can help you with questions about our services, workflow process, support tiers, tools, or how to get started. Could you provide more details about what you\'re looking for?'
-      : 'Je peux vous aider avec des questions sur nos services, notre processus de flux de travail, nos niveaux de support, nos outils ou comment commencer. Pourriez-vous fournir plus de détails sur ce que vous recherchez?'
+      ? 'I can help you with questions about our services, workflow process, support tiers, tools, intake optimization, use cases, roadmap, or how to get started. Could you provide more details about what you\'re looking for? Try asking about specific topics like "What are the service tiers?", "How does the workflow work?", "Tell me about EVA Chat", or "How do I get started?"'
+      : 'Je peux vous aider avec des questions sur nos services, notre processus de flux de travail, nos niveaux de support, nos outils, l\'optimisation de l\'admission, les cas d\'utilisation, la feuille de route ou comment commencer. Pourriez-vous fournir plus de détails sur ce que vous recherchez? Essayez de poser des questions sur des sujets spécifiques comme "Quels sont les niveaux de service?", "Comment fonctionne le flux de travail?", "Parlez-moi d\'EVA Chat", ou "Comment puis-je commencer?"'
   }
 
   const handleOpen = () => {
@@ -179,20 +131,98 @@ export function EVAAskMe() {
     }
   }
 
-  const quickActions = [
-    {
-      label: language === 'en' ? 'How do I get started?' : 'Comment puis-je commencer?',
-      query: 'how do I get started'
-    },
-    {
-      label: language === 'en' ? 'What services do you offer?' : 'Quels services offrez-vous?',
-      query: 'what services do you offer'
-    },
-    {
-      label: language === 'en' ? 'Explain the workflow' : 'Expliquer le flux de travail',
-      query: 'explain the workflow'
+  const getQuickActions = () => {
+    const path = location.pathname
+    
+    const baseActions = [
+      {
+        label: language === 'en' ? 'How do I get started?' : 'Comment puis-je commencer?',
+        query: 'how do I get started'
+      },
+      {
+        label: language === 'en' ? 'What are the service tiers?' : 'Quels sont les niveaux de service?',
+        query: 'what are the service tiers'
+      },
+      {
+        label: language === 'en' ? 'Explain the workflow' : 'Expliquer le flux de travail',
+        query: 'explain the workflow'
+      }
+    ]
+    
+    const pathSpecificActions: Record<string, { label: { en: string; fr: string }; query: string }[]> = {
+      '/program-overview': [
+        {
+          label: { en: 'What problem does this solve?', fr: 'Quel problème cela résout-il?' },
+          query: 'what problem does this solve'
+        },
+        {
+          label: { en: 'What are the program goals?', fr: 'Quels sont les objectifs du programme?' },
+          query: 'what are the program goals'
+        }
+      ],
+      '/how-it-works': [
+        {
+          label: { en: 'Tell me about Step 1', fr: 'Parlez-moi de l\'étape 1' },
+          query: 'tell me about step 1'
+        },
+        {
+          label: { en: 'How do I design prompts?', fr: 'Comment concevoir des invites?' },
+          query: 'how do I design prompts'
+        }
+      ],
+      '/services': [
+        {
+          label: { en: 'Which tier should I choose?', fr: 'Quel niveau dois-je choisir?' },
+          query: 'which tier should I choose'
+        },
+        {
+          label: { en: 'What is Tier 2?', fr: 'Qu\'est-ce que le niveau 2?' },
+          query: 'what is tier 2'
+        }
+      ],
+      '/intake-optimization': [
+        {
+          label: { en: 'Benefits of early advisory?', fr: 'Avantages des conseils précoces?' },
+          query: 'benefits of early advisory'
+        },
+        {
+          label: { en: 'When should I engage?', fr: 'Quand dois-je m\'engager?' },
+          query: 'when should I engage'
+        }
+      ],
+      '/use-case': [
+        {
+          label: { en: 'Tell me about Option 1', fr: 'Parlez-moi de l\'option 1' },
+          query: 'tell me about option 1'
+        },
+        {
+          label: { en: 'Which option is recommended?', fr: 'Quelle option est recommandée?' },
+          query: 'which option is recommended'
+        }
+      ],
+      '/roadmap': [
+        {
+          label: { en: 'What are the expected outcomes?', fr: 'Quels sont les résultats attendus?' },
+          query: 'what are the expected outcomes'
+        },
+        {
+          label: { en: 'What is the timeline?', fr: 'Quel est le calendrier?' },
+          query: 'what is the timeline'
+        }
+      ]
     }
-  ]
+    
+    const specificActions = pathSpecificActions[path]
+    
+    if (specificActions) {
+      return specificActions.map(action => ({
+        label: language === 'en' ? action.label.en : action.label.fr,
+        query: action.query
+      }))
+    }
+    
+    return baseActions
+  }
 
   const handleQuickAction = (query: string) => {
     setInput(query)
@@ -338,7 +368,7 @@ export function EVAAskMe() {
                       {language === 'en' ? 'Quick actions:' : 'Actions rapides:'}
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {quickActions.map((action, idx) => (
+                      {getQuickActions().map((action, idx) => (
                         <Button
                           key={idx}
                           onClick={() => handleQuickAction(action.query)}

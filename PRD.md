@@ -55,11 +55,11 @@ A production-ready, bilingual website presenting ESDC IITB's AI CoE Prompt Servi
 - Success criteria: Phases sequential, activities clear, realistic timeline
 
 **EVA AskMe Interactive Assistant**
-- Functionality: Floating AI assistant widget providing contextual help and guidance
-- Purpose: Help users navigate the portal, understand features, and get answers to common questions
+- Functionality: Floating bilingual AI assistant widget providing comprehensive contextual help and guidance across all portal pages
+- Purpose: Help users navigate the portal, understand features, get detailed answers to program questions, and access relevant information based on their current context
 - Trigger: User clicks floating button in bottom-right corner (accessible on all pages)
-- Progression: Click button → chat window opens → user asks question or selects quick action → receives contextual answer → can ask follow-up questions → close when done
-- Success criteria: Provides relevant answers based on current page, answers common FAQs, offers quick actions for common queries, maintains conversation history during session
+- Progression: Click button → chat window opens with contextual greeting → user asks question or selects page-specific quick action → AI searches comprehensive knowledge base with 30+ detailed topics → receives accurate bilingual answer → can ask follow-up questions → close when done
+- Success criteria: Provides accurate answers from extensive knowledge base covering program overview, 7-step workflow, service tiers, tools (EVA Chat/Copilot), intake optimization, SCORM use case, roadmap, and general guidance; adapts quick actions based on current page; maintains conversation history; supports both English and French seamlessly
 
 ## Edge Case Handling
 
@@ -68,9 +68,13 @@ A production-ready, bilingual website presenting ESDC IITB's AI CoE Prompt Servi
 - **Keyboard-only navigation**: Full tab order through all interactive elements
 - **Screen reader use**: Semantic HTML with ARIA labels where needed
 - **No JavaScript**: Progressive enhancement ensures core content remains accessible
-- **EVA AskMe offline**: Widget gracefully handles questions without requiring external API calls by using predefined contextual responses
-- **Repeated questions**: EVA AskMe provides consistent, helpful answers and can direct users to relevant pages
+- **EVA AskMe comprehensive knowledge**: Widget uses extensive local knowledge base (30+ topics) covering all portal content without requiring external API calls
+- **EVA AskMe intelligent matching**: Uses keyword-based scoring system to find best matching answers; provides contextual boost for questions related to current page
+- **EVA AskMe bilingual support**: All knowledge base content fully available in both English and French with seamless language switching
+- **Repeated questions**: EVA AskMe provides consistent, detailed answers and can direct users to relevant pages
 - **Widget on mobile**: Chat interface adapts to smaller screens (90vw width on mobile, fixed width on desktop)
+- **Page-specific quick actions**: Quick action buttons change based on current page to offer most relevant suggestions
+- **Unclear questions**: EVA provides helpful guidance suggesting specific topics users can ask about
 
 ## Design Direction
 
