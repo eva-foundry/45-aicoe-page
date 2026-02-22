@@ -5,7 +5,6 @@ import {
   ArrowRight24Regular, 
   Sparkle24Filled, 
   People24Regular, 
-  Lightbulb24Regular, 
   Rocket24Regular 
 } from '@fluentui/react-icons'
 import { FluentContainer, FluentCardCustom } from '@/components/fluent'

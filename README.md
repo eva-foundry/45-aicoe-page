@@ -108,6 +108,24 @@ src/
 └── main.tsx                         # App entry point
 ```
 
+## Architecture Diagrams (ASCII)
+
+For a full architecture view (runtime composition, routing, source layout, and build/deploy flow), see:
+
+- [ARCHITECTURE_ASCII.md](./ARCHITECTURE_ASCII.md)
+
+Quick runtime view:
+
+```text
+main.tsx
+   -> ErrorBoundary
+      -> App
+         -> FluentProvider(gcTheme)
+            -> I18nProvider
+               -> BrowserRouter
+                  -> FluentHeader + Routes(lazy pages) + FluentFooter + EVAAskMeFluent
+```
+
 ## Getting Started
 
 ### Prerequisites

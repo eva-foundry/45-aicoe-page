@@ -36,6 +36,7 @@ EMERGENCY_FIX.bat
 | File | Purpose | When to Use |
 |------|---------|-------------|
 | **[README.md](./README.md)** | Main project documentation | Getting started |
+| **[ARCHITECTURE_ASCII.md](./ARCHITECTURE_ASCII.md)** | System/runtime/build architecture (ASCII) | Understanding how the app is structured |
 | [ERROR_FIXES.md](./ERROR_FIXES.md) | History of all fixes applied | Understanding past issues |
 | [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) | Comprehensive troubleshooting | Other errors or issues |
 
@@ -43,6 +44,7 @@ EMERGENCY_FIX.bat
 | File | Purpose |
 |------|---------|
 | [PRD.md](./PRD.md) | Product Requirements Document |
+| [ARCHITECTURE_ASCII.md](./ARCHITECTURE_ASCII.md) | Runtime composition and architecture diagrams |
 | [FLUENT_UI_MIGRATION.md](./FLUENT_UI_MIGRATION.md) | Fluent UI migration guide |
 | [DEPLOYMENT_NOTES.md](./DEPLOYMENT_NOTES.md) | Deployment information |
 | [SECURITY.md](./SECURITY.md) | Security information |
@@ -65,6 +67,7 @@ Do you have an error?
 └─ NO → Want to:
     │
     ├─ Start development? → Read README.md "Getting Started"
+    ├─ Understand architecture? → Read ARCHITECTURE_ASCII.md
     ├─ Understand the project? → Read README.md + PRD.md
     ├─ Deploy the app? → Read DEPLOYMENT_NOTES.md
     └─ Understand Fluent UI? → Read FLUENT_UI_MIGRATION.md
