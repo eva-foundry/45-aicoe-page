@@ -108,6 +108,13 @@ src/
    ```bash
    npm install
    ```
+   
+   **⚠️ If you encounter Vite module errors**, run a clean install:
+   ```bash
+   rm -rf node_modules package-lock.json
+   npm cache clean --force
+   npm install
+   ```
 
 3. **Start development server**
    ```bash
@@ -115,6 +122,14 @@ src/
    ```
 
    The site will be available at `http://localhost:5173`
+
+### Troubleshooting
+
+If you encounter errors during installation or development:
+
+- **Vite module not found errors**: See [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
+- **Port already in use**: Run `npm run kill` then `npm run dev`
+- **TypeScript errors**: Run `npm run build` to check for compilation issues
 
 ### Available Scripts
 
