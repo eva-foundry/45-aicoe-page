@@ -121,41 +121,41 @@ Animations should be minimal and functional, supporting usability without drawin
 
 ## Component Selection
 
-- **Components**: 
-  - Header with language toggle, Canada wordmark, and top navigation
-  - Breadcrumbs for page hierarchy
-  - Hero banners with icon, title, subtitle, and description (3 variants)
-  - Cards for service tiers, use case options, and outcomes
-  - Icon cards for feature highlights with hover animations
-  - Stepper for workflow model and roadmap phases
-  - Details/accordion for expandable content (pros/cons)
-  - Button for CTAs and navigation
-  - Notice for important callouts
-  - Container and Grid for layout structure
-  - Service tier badges with distinctive icons
+- **Components** (Fluent UI v9): 
+  - Header with language toggle, Canada wordmark, and top navigation (using Fluent UI Toolbar, Button)
+  - Breadcrumbs for page hierarchy (Fluent UI Breadcrumb)
+  - Hero banners with icon, title, subtitle, and description (3 variants, custom styled with Fluent UI tokens)
+  - Cards for service tiers, use case options, and outcomes (Fluent UI Card)
+  - Icon cards for feature highlights with hover animations (custom Card variants)
+  - Stepper for workflow model and roadmap phases (custom implementation using Fluent UI primitives)
+  - Details/accordion for expandable content (Fluent UI Accordion)
+  - Button for CTAs and navigation (Fluent UI Button with various appearances)
+  - Notice for important callouts (Fluent UI MessageBar)
+  - Container and Grid for layout structure (CSS Grid with Fluent UI spacing tokens)
+  - Service tier badges with distinctive icons (Fluent UI Badge)
   - Decorative pattern overlays (dots, grid, waves, circuit)
   - AI-themed illustrations (brain, network, workflow, collaboration)
-  - EVA AskMe floating chat widget with contextual AI assistance
+  - EVA AskMe floating chat widget with contextual AI assistance (custom with Fluent UI Dialog/Popover)
 
 - **Customizations**: 
-  - Language switcher integrated into header
+  - Language switcher integrated into header (Fluent UI Button)
   - GC signature branding with Canada wordmark SVG component
-  - Step indicator component for workflow visualization
+  - Step indicator component for workflow visualization (custom styled)
   - Bilingual content wrapper components
-  - Custom hero banner component with 3 visual variants
-  - Icon card component with hover scale effects
+  - Custom hero banner component with 3 visual variants (using Fluent UI makeStyles)
+  - Icon card component with hover scale effects (Fluent UI Card with transitions)
   - Decorative background patterns for visual interest
   - Abstract AI illustrations for thematic reinforcement
   - EVA AskMe floating assistant widget with contextual awareness and bilingual support
-  - Chat interface with message history, typing indicators, and quick action buttons
+  - Chat interface with message history, typing indicators, and quick action buttons (Fluent UI Dialog, Input, ScrollArea)
 
 - **Icon System**:
-  - Phosphor Icons used consistently throughout
-  - Key icons: Sparkle (innovation), Lightbulb (ideas), Users (collaboration), 
-    Rocket (deployment), Check (success), Target (goals), FlowArrow (workflow),
-    MapTrifold (roadmap), Warning (alerts), Envelope (contact), Stack (services)
+  - Fluent UI Icons (@fluentui/react-icons) used consistently throughout
+  - Key icons: Sparkle (innovation), Lightbulb (ideas), People (collaboration), 
+    Rocket (deployment), Checkmark (success), Target (goals), ArrowSync (workflow),
+    Map (roadmap), Warning (alerts), Mail (contact), Stack (services)
   - Icons sized appropriately: 48px for heroes, 32px for cards, 20-24px for lists
-  - Weight usage: "fill" for primary actions, "bold" for secondary elements
+  - Regular and Filled variants available for different emphasis levels
 
 - **States**: 
   - Links: default (blue), hover (darker blue + underline), focus (outline ring), visited (purple tint)

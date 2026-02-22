@@ -1,14 +1,117 @@
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useI18n } from '@/i18n/I18nContext'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { Input } from '@/components/ui/input'
-import { X, PaperPlaneRight, Sparkle } from '@phosphor-icons/react'
-import { cn } from '@/lib/utils'
+import { 
+  Button, 
+  Input, 
+  makeStyles,
+  tokens,
+  Dialog,
+  DialogSurface,
+  DialogBody,
+  DialogTitle,
+  DialogContent,
+} from '@fluentui/react-components'
+import { 
+  Dismiss24Regular, 
+  Send24Regular, 
+  Sparkle24Regular 
+} from '@fluentui/react-icons'
 import { motion, AnimatePresence } from 'framer-motion'
-import { findBestMatch, getCategoryKnowledge } from '@/lib/eva-knowledge-base'
+import { findBestMatch } from '@/lib/eva-knowledge-base'
+
+const useStyles = makeStyles({
+  floatingButton: {
+    position: 'fixed',
+    bottom: '24px',
+    right: '24px',
+    width: '120px',
+    height: '60px',
+    backgroundColor: '#AF3C43',
+    color: '#FFFFFF',
+    border: 'none',
+    borderRadius: '8px',
+    cursor: 'pointer',
+    boxShadow: '0 4px 12px rgba(175, 60, 67, 0.3)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '4px',
+    fontSize: '12px',
+    fontWeight: 600,
+    transition: 'all 0.3s ease',
+    zIndex: 1000,
+    ':hover': {
+      backgroundColor: '#8B3035',
+      transform: 'scale(1.05)',
+      boxShadow: '0 6px 16px rgba(175, 60, 67, 0.4)',
+    },
+  },
+  buttonText: {
+    textAlign: 'center',
+    lineHeight: '1.2',
+    color: '#AF3C43',
+  },
+  dialogSurface: {
+    width: '450px',
+    maxWidth: '90vw',
+    height: '600px',
+    maxHeight: '80vh',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  dialogHeader: {
+    backgroundColor: '#8B3035',
+    color: '#FFFFFF',
+    padding: '16px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  messagesContainer: {
+    flex: 1,
+    overflowY: 'auto',
+    padding: '16px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '12px',
+  },
+  message: {
+    maxWidth: '80%',
+    padding: '12px 16px',
+    borderRadius: '8px',
+    fontSize: '14px',
+    lineHeight: '1.5',
+  },
+  userMessage: {
+    alignSelf: 'flex-end',
+    backgroundColor: '#26374A',
+    color: '#FFFFFF',
+  },
+  assistantMessage: {
+    alignSelf: 'flex-start',
+    backgroundColor: '#F8F9FA',
+    color: '#26374A',
+    border: '1px solid #E0E0E0',
+  },
+  inputContainer: {
+    padding: '16px',
+    borderTop: '1px solid #E0E0E0',
+    display: 'flex',
+    gap: '8px',
+  },
+  quickActions: {
+    padding: '0 16px 16px',
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '8px',
+  },
+  quickActionButton: {
+    fontSize: '12px',
+    padding: '4px 8px',
+  },
+})
 
 interface Message {
   id: string
@@ -20,6 +123,7 @@ interface Message {
 export function EVAAskMe() {
   const { language, t } = useI18n()
   const location = useLocation()
+  const styles = useStyles()
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')

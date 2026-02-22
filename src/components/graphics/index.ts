@@ -1,4 +1,5 @@
 export { CanadaWordmark } from './CanadaWordmark'
+export { GCSymbol } from './GCSymbol'
 export { HeroBanner } from './HeroBanner'
 export { IconCard } from './IconCard'
 export { DecorativePattern } from './DecorativePattern'

@@ -2,6 +2,31 @@
 
 A production-ready, fully bilingual (EN/FR) website presenting Employment and Social Development Canada's (ESDC) Innovation, Information Technology Branch (IITB) AI Centre of Enablement "Prompt Services & Workflow Enablement Program".
 
+## ⚡ **MAJOR UPDATE: Fluent UI Migration**
+
+**The application is currently being refactored from shadcn/Tailwind CSS to Microsoft Fluent UI React components.** This provides a modern, enterprise-grade design system with built-in accessibility and consistency with Microsoft 365 applications.
+
+### Migration Status
+
+✅ **Completed:**
+- Fluent UI packages installed (`@fluentui/react-components`, `@fluentui/react-icons`)
+- Custom GC-branded Fluent theme created
+- Core layout components refactored:
+  - `FluentHeader` - Bilingual header with navigation
+  - `FluentFooter` - GC footer with required links
+  - `FluentContainer` - Responsive container
+  - `FluentCard` - Custom card component
+  - `FluentBreadcrumbs` - Navigation breadcrumbs
+  - `EVAAskMeFluent` - AI assistant widget
+  - `HomePageFluent` - Homepage (example)
+
+🚧 **In Progress:**
+- Remaining 7 pages need migration to Fluent UI
+- Graphics components need Fluent icon updates
+- Utility components migration
+
+📖 **Documentation:** See [FLUENT_UI_MIGRATION.md](./FLUENT_UI_MIGRATION.md) for complete migration guide
+
 ## Overview
 
 This website provides comprehensive information about the AI CoE's program designed to help ESDC employees leverage AI tools effectively through structured guidance, hands-on workflow development, and enterprise-grade support.
@@ -9,51 +34,58 @@ This website provides comprehensive information about the AI CoE's program desig
 ### Key Features
 
 - ✅ **Fully Bilingual**: Complete English and French translations with persistent language preference
-- ✅ **WCAG 2.2 AA Compliant**: Accessible design following Government of Canada standards
-- ✅ **GC Design System Inspired**: Components and styling follow GC design principles and patterns
+- ✅ **WCAG 2.2 AA Compliant**: Accessible design following Government of Canada standards  
+- ✅ **Fluent UI Design System**: Modern Microsoft design system with GC branding
 - ✅ **Responsive Design**: Mobile-first approach with breakpoints at 768px and 1024px
 - ✅ **8 Comprehensive Pages**: Complete program information architecture
 - ✅ **Production-Ready**: TypeScript, React 19, modern build tooling
+- ✅ **EVA AskMe Assistant**: Interactive bilingual AI chatbot widget
 
 ## Technology Stack
 
 - **Framework**: React 19 with TypeScript
 - **Build Tool**: Vite 6
 - **Routing**: React Router DOM v7
-- **Styling**: Tailwind CSS v4 with custom GC color tokens
-- **Components**: Custom GC-styled components + shadcn/ui base components
-- **Icons**: Phosphor Icons
-- **Fonts**: Noto Sans (Google Fonts)
+- **UI Library**: **Microsoft Fluent UI v9** (React Components)
+- **Icons**: **Fluent UI Icons** (replacing Phosphor Icons)
+- **Styling**: **Fluent UI makeStyles** (CSS-in-JS with Griffel)
+- **Fonts**: Inter, JetBrains Mono, Noto Serif (Google Fonts)
 - **State Management**: React hooks + Spark KV for persistence
-- **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation
+- **Accessibility**: Built-in Fluent UI accessibility features + semantic HTML
 
 ## Project Structure
 
 ```
 src/
-├── App.tsx                           # Main app with routing
+├── App.tsx                           # Main app with FluentProvider & routing
+├── lib/
+│   └── fluent-theme.ts              # Custom GC-branded Fluent UI theme
 ├── i18n/
 │   ├── I18nContext.tsx              # Language context provider
 │   └── translations.ts              # All EN/FR translations
 ├── components/
-│   ├── gc/                          # GC Design System components
-│   │   ├── GCHeader.tsx            # Site header with nav & language toggle
-│   │   ├── GCFooter.tsx            # Site footer
-│   │   ├── GCBreadcrumbs.tsx       # Breadcrumb navigation
-│   │   ├── GCContainer.tsx         # Responsive container
-│   │   ├── GCCard.tsx              # Card components
-│   │   └── GCUtils.tsx             # Stepper, Notice components
-│   └── ui/                          # shadcn base components
+│   ├── fluent/                      # ✨ NEW: Fluent UI components
+│   │   ├── FluentHeader.tsx        # Site header with nav & language toggle
+│   │   ├── FluentFooter.tsx        # Site footer
+│   │   ├── FluentBreadcrumbs.tsx   # Breadcrumb navigation
+│   │   ├── FluentContainer.tsx     # Responsive container
+│   │   ├── FluentCard.tsx          # Card component
+│   │   └── index.ts                # Barrel export
+│   ├── EVAAskMeFluent.tsx          # ✨ NEW: Fluent UI EVA assistant
+│   ├── gc/                          # ⚠️ DEPRECATED: Old GC components
+│   ├── graphics/                    # SVG graphics & illustrations
+│   └── ui/                          # ⚠️ DEPRECATED: shadcn components
 ├── pages/
-│   ├── HomePage.tsx                 # Landing page
-│   ├── ProgramOverviewPage.tsx      # Program details & goals
-│   ├── HowItWorksPage.tsx           # 7-step AI workflow model
-│   ├── ServicesPage.tsx             # 3-tier service model
-│   ├── IntakeOptimizationPage.tsx   # Early advisory benefits
-│   ├── UseCasePage.tsx              # SCORM case study with 4 options
-│   ├── RoadmapPage.tsx              # Implementation phases & outcomes
-│   └── ContactPage.tsx              # How to engage
-├── index.css                        # Custom GC color tokens & theme
+│   ├── HomePageFluent.tsx           # ✨ NEW: Fluent UI homepage
+│   ├── HomePage.tsx                 # ⚠️ OLD: Needs migration
+│   ├── ProgramOverviewPage.tsx      # ⚠️ OLD: Needs migration
+│   ├── HowItWorksPage.tsx           # ⚠️ OLD: Needs migration
+│   ├── ServicesPage.tsx             # ⚠️ OLD: Needs migration
+│   ├── IntakeOptimizationPage.tsx   # ⚠️ OLD: Needs migration
+│   ├── UseCasePage.tsx              # ⚠️ OLD: Needs migration
+│   ├── RoadmapPage.tsx              # ⚠️ OLD: Needs migration
+│   └── ContactPage.tsx              # ⚠️ OLD: Needs migration
+├── index.css                        # Custom GC color tokens (being phased out)
 └── main.tsx                         # App entry point
 ```
 
