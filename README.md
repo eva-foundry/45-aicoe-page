@@ -1,23 +1,35 @@
-# ✨ Welcome to Your Spark Template!
-You've just launched your brand-new Spark Template Codespace — everything’s fired up and ready for you to explore, build, and create with Spark!
+# Spark Template (React + Fluent UI)
 
-This template is your blank canvas. It comes with a minimal setup to help you get started quickly with Spark development.
+This repository has been refactored from the default shadcn/radix + Tailwind scaffold to a React + Fluent UI baseline.
 
-🚀 What's Inside?
-- A clean, minimal Spark environment
-- Pre-configured for local development
-- Ready to scale with your ideas
-  
-🧠 What Can You Do?
+## Current app
 
-Right now, this is just a starting point — the perfect place to begin building and testing your Spark applications.
+- Runtime: React 19 + Vite 7
+- UI framework: Fluent UI (`@fluentui/react-components`)
+- Error handling: `react-error-boundary` with Fluent-based fallback UI
+- Spark integration: `@github/spark` runtime + Vite plugins
 
-🧹 Just Exploring?
-No problem! If you were just checking things out and don’t need to keep this code:
+## Project documents
 
-- Simply delete your Spark.
-- Everything will be cleaned up — no traces left behind.
+- Plan: [PLAN.md](PLAN.md)
+- Status: [STATUS.md](STATUS.md)
+- Architecture + diagrams: [ARCHITECTURE.md](ARCHITECTURE.md)
+- Tech inventory/status: [TECH-STATUS.md](TECH-STATUS.md)
 
-📄 License For Spark Template Resources 
+## Development
 
-The Spark Template files and resources from GitHub are licensed under the terms of the MIT license, Copyright GitHub, Inc.
+```bash
+npm install
+npm run dev
+```
+
+Build check:
+
+```bash
+npm run build
+npm run lint
+```
+
+## Notes
+
+Legacy UI scaffold artifacts and no-value dependencies were removed to establish a clean migration baseline.
