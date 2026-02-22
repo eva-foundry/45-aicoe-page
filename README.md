@@ -2,6 +2,25 @@
 
 A production-ready, fully bilingual (EN/FR) website presenting Employment and Social Development Canada's (ESDC) Innovation, Information Technology Branch (IITB) AI Centre of Enablement "Prompt Services & Workflow Enablement Program".
 
+---
+
+```
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║  🚨 ERROR DETECTED: Vite module corrupted                           ║
+║                                                                      ║
+║  ⚡ QUICK FIX (30 seconds):                                         ║
+║                                                                      ║
+║     Linux/Mac:    ./EMERGENCY_FIX.sh                                ║
+║     Windows:      EMERGENCY_FIX.bat                                 ║
+║                                                                      ║
+║  📖 Details: START_HERE.md or ERROR_RESOLUTION.md                   ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+```
+
+---
+
 ## ⚡ **MAJOR UPDATE: Fluent UI Migration**
 
 **The application is currently being refactored from shadcn/Tailwind CSS to Microsoft Fluent UI React components.** This provides a modern, enterprise-grade design system with built-in accessibility and consistency with Microsoft 365 applications.
