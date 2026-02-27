@@ -15,7 +15,7 @@
         "@fluentui/react-components": "^9.61.0",
         "@github/spark": ">=0.43.1 <1",
         "react": "^19.0.0",
-        "react-dom": "^19.0.0",
+        "react-dom": "^19.2.4",
         "react-error-boundary": "^6.0.0"
     },
     "devDependencies": {
