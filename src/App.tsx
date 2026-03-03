@@ -1,32 +1,20 @@
-import { Body1, Card, CardHeader, makeStyles, Title2 } from '@fluentui/react-components'
-
-const useStyles = makeStyles({
-    page: {
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '24px',
-    },
-    card: {
-        width: '100%',
-        maxWidth: '720px',
-    },
-})
+// EVA-STORY: F45-04-001
+import { Routes, Route } from "react-router-dom";
+import { Layout } from "./pages/layout/Layout";
+import { HomePage } from "./pages/home/HomePage";
+import { AboutPage } from "./pages/about/AboutPage";
+import { ProductsPage } from "./pages/products/ProductsPage";
 
 function App() {
-    const styles = useStyles()
-
-    return (
-        <main className={styles.page}>
-            <Card className={styles.card}>
-                <CardHeader
-                    header={<Title2>React + Fluent UI Migration Baseline</Title2>}
-                    description={<Body1>Legacy shadcn/radix scaffold has been removed from runtime.</Body1>}
-                />
-            </Card>
-        </main>
-    )
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="products" element={<ProductsPage />} />
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;

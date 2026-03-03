@@ -1,20 +1,22 @@
+/// <reference types="vitest" />
+// EVA-STORY: F45-01-005  F45-06-002
 import react from "@vitejs/plugin-react-swc";
-import { defineConfig, PluginOption } from "vite";
-
-import sparkPlugin from "@github/spark/spark-vite-plugin";
-import { resolve } from 'path'
-
-const projectRoot = process.env.PROJECT_ROOT || import.meta.dirname
+import { defineConfig } from "vite";
+import { resolve } from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    sparkPlugin() as PluginOption,
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(projectRoot, 'src')
-    }
+      "@": resolve(__dirname, "src"),
+    },
+  },
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: ["./src/test/setup.ts"],
+    include: ["src/**/*.{test,spec}.{ts,tsx}"],
+    exclude: ["**/node_modules/**", "**/dist/**"],
   },
 });

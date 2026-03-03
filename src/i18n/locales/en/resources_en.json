@@ -1,0 +1,57 @@
+{
+  "AICOE": "AICOE",
+  "AI Centre of Excellence": "AI Centre of Excellence",
+
+  "Skip to main content": "Skip to main content",
+  "Primary navigation": "Primary navigation",
+
+  "Switch interface language to French": "Switch interface language to French",
+  "Switch interface language to English": "Switch interface language to English",
+
+  "Home": "Home",
+  "About": "About",
+  "Products": "Products",
+  "Contact": "Contact",
+
+  "Welcome to AICOE": "Welcome to AICOE",
+  "Empowering the Government of Canada with responsible AI.": "Empowering the Government of Canada with responsible AI.",
+
+  "Our Tools": "Our Tools",
+  "EVA-JP": "EVA-JP",
+  "EVA-JP description": "Bilingual AI assistant for jurisprudence and case law research.",
+  "EVA Accelerator": "EVA Accelerator",
+  "EVA Accelerator description": "Self-service workspace booking portal for AI environments.",
+
+  "About AICOE": "About AICOE",
+  "About description": "The AI Centre of Excellence (AICOE) develops responsible, accessible, and bilingual AI solutions for the Government of Canada.",
+
+  "Get in touch": "Get in touch",
+  "Footer note": "Government of Canada · AICOE",
+
+  "about.mission.heading": "Our Mission",
+  "about.mission.body": "The AI Centre of Excellence partners with Government of Canada departments to build, evaluate, and deploy responsible AI systems — ensuring they are explainable, bilingual, accessible, and aligned with GC policies.",
+
+  "about.pillars.heading": "Our Pillars",
+  "about.pillar1.title": "Responsible AI",
+  "about.pillar1.body": "We design for fairness, transparency, and accountability in every system we build.",
+  "about.pillar2.title": "Bilingual by Design",
+  "about.pillar2.body": "All AICOE products work equally well in English and French from day one.",
+  "about.pillar3.title": "Accessible",
+  "about.pillar3.body": "WCAG 2.1 AA compliance is a hard requirement — not a checkbox.",
+
+  "about.contact.body": "Reach the AICOE team through your departmental AI liaison or through the EVA platform.",
+
+  "products.hero.sub": "AI tools built by AICOE for the Government of Canada.",
+  "products.section.heading": "Available Products",
+  "products.status.active": "Active",
+  "products.status.poc": "POC",
+
+  "products.eva-jp.feature1": "Hybrid RAG over jurisprudence and statute indexes",
+  "products.eva-jp.feature2": "Bilingual EN/FR responses",
+  "products.eva-jp.feature3": "RBAC with persona switching (researcher, clerk, admin)",
+  "products.eva-jp.feature4": "Azure AI Search + Azure OpenAI powered",
+
+  "products.accelerator.feature1": "Self-service workspace booking with 3-step wizard",
+  "products.accelerator.feature2": "Entry and exit survey workflows for governance",
+  "products.accelerator.feature3": "Role-based team management per booking",
+  "products.accelerator.feature4": "AI assistant panel wired to EVA Brain v2"}

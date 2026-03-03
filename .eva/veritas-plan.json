@@ -1,0 +1,340 @@
+{
+  "schema": "eva.veritas-plan.v1",
+  "generated_at": "2026-02-25T06:38:03.476Z",
+  "generated_from": [
+    "PLAN.md"
+  ],
+  "format_detected": "veritas",
+  "prefix": "F45",
+  "features": [
+    {
+      "id": "F45-01",
+      "title": "EVA Team Structural Alignment",
+      "source_heading": "## Feature: EVA Team Structural Alignment [ID=F45-01]",
+      "stories": [
+        {
+          "id": "F45-01-001",
+          "title": "Replace FluentProvider with GCThemeProvider",
+          "feature_id": "F45-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-01-002",
+          "title": "Add AnnouncerProvider for WCAG aria-live",
+          "feature_id": "F45-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-01-003",
+          "title": "Add HashRouter and React.StrictMode",
+          "feature_id": "F45-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-01-004",
+          "title": "Wire @eva shared deps",
+          "feature_id": "F45-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-01-005",
+          "title": "Remove @github/spark Vite plugin",
+          "feature_id": "F45-01",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F45-02",
+      "title": "Bilingual i18n Scaffold",
+      "source_heading": "## Feature: Bilingual i18n Scaffold [ID=F45-02]",
+      "stories": [
+        {
+          "id": "F45-02-001",
+          "title": "Add i18next with LanguageDetector",
+          "feature_id": "F45-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-02-002",
+          "title": "Seed EN and FR locale files",
+          "feature_id": "F45-02",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F45-03",
+      "title": "Layout Shell",
+      "source_heading": "## Feature: Layout Shell [ID=F45-03]",
+      "stories": [
+        {
+          "id": "F45-03-001",
+          "title": "Build Layout component with skip-link and nav",
+          "feature_id": "F45-03",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-03-002",
+          "title": "Wire route-change announcer effect",
+          "feature_id": "F45-03",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F45-04",
+      "title": "Home Page",
+      "source_heading": "## Feature: Home Page [ID=F45-04]",
+      "stories": [
+        {
+          "id": "F45-04-001",
+          "title": "Build HomePage with hero and tool cards",
+          "feature_id": "F45-04",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F45-05",
+      "title": "Content Pages",
+      "source_heading": "## Feature: Content Pages [ID=F45-05]",
+      "stories": [
+        {
+          "id": "F45-05-001",
+          "title": "Build AboutPage route-- COMPLETE 2026-02-24",
+          "feature_id": "F45-05",
+          "source": "heading",
+          "tasks": [
+            {
+              "id": "F45-05-001-T01",
+              "title": "Create src/pages/about/AboutPage.tsx",
+              "story_id": "F45-05-001",
+              "feature_id": "F45-05",
+              "done": false,
+              "source": "checklist"
+            },
+            {
+              "id": "F45-05-001-T02",
+              "title": "Add /about route to App.tsx Routes",
+              "story_id": "F45-05-001",
+              "feature_id": "F45-05",
+              "done": false,
+              "source": "checklist"
+            },
+            {
+              "id": "F45-05-001-T03",
+              "title": "Add EN/FR locale keys",
+              "story_id": "F45-05-001",
+              "feature_id": "F45-05",
+              "done": false,
+              "source": "checklist"
+            }
+          ]
+        },
+        {
+          "id": "F45-05-002",
+          "title": "Build ProductsPage route-- COMPLETE 2026-02-24",
+          "feature_id": "F45-05",
+          "source": "heading",
+          "tasks": [
+            {
+              "id": "F45-05-002-T01",
+              "title": "Create src/pages/products/ProductsPage.tsx with EVA product cards",
+              "story_id": "F45-05-002",
+              "feature_id": "F45-05",
+              "done": false,
+              "source": "checklist"
+            },
+            {
+              "id": "F45-05-002-T02",
+              "title": "Add /products route to App.tsx Routes",
+              "story_id": "F45-05-002",
+              "feature_id": "F45-05",
+              "done": false,
+              "source": "checklist"
+            },
+            {
+              "id": "F45-05-002-T03",
+              "title": "Add EN/FR locale keys",
+              "story_id": "F45-05-002",
+              "feature_id": "F45-05",
+              "done": false,
+              "source": "checklist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F45-06",
+      "title": "CI and Test Coverage",
+      "source_heading": "## Feature: CI and Test Coverage [ID=F45-06]",
+      "stories": [
+        {
+          "id": "F45-06-001",
+          "title": "Add GitHub Actions build + lint CI-- COMPLETE 2026-02-24",
+          "feature_id": "F45-06",
+          "source": "heading",
+          "tasks": [
+            {
+              "id": "F45-06-001-T01",
+              "title": "Create .github/workflows/ci.yml: node setup, npm ci --legacy-peer-deps, npm run build, npm run lint",
+              "story_id": "F45-06-001",
+              "feature_id": "F45-06",
+              "done": false,
+              "source": "checklist"
+            }
+          ]
+        },
+        {
+          "id": "F45-06-002",
+          "title": "Add Vitest and first component tests-- COMPLETE 2026-02-24",
+          "feature_id": "F45-06",
+          "source": "heading",
+          "tasks": [
+            {
+              "id": "F45-06-002-T01",
+              "title": "Add vitest + @testing-library/react + @testing-library/dom to dev deps",
+              "story_id": "F45-06-002",
+              "feature_id": "F45-06",
+              "done": false,
+              "source": "checklist"
+            },
+            {
+              "id": "F45-06-002-T02",
+              "title": "Add test for Layout renders skip-link (3 tests)",
+              "story_id": "F45-06-002",
+              "feature_id": "F45-06",
+              "done": false,
+              "source": "checklist"
+            },
+            {
+              "id": "F45-06-002-T03",
+              "title": "Add test for HomePage renders hero heading (2 tests)",
+              "story_id": "F45-06-002",
+              "feature_id": "F45-06",
+              "done": false,
+              "source": "checklist"
+            },
+            {
+              "id": "F45-06-002-T04",
+              "title": "All 5 tests pass, exit 0",
+              "story_id": "F45-06-002",
+              "feature_id": "F45-06",
+              "done": false,
+              "source": "checklist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F45-UI",
+      "title": "UI Pages",
+      "source_heading": "## Feature: UI Pages [ID=F45-UI]",
+      "stories": [
+        {
+          "id": "F45-UI-001",
+          "title": "Route about",
+          "feature_id": "F45-UI",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-002",
+          "title": "Route products",
+          "feature_id": "F45-UI",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-003",
+          "title": "ABOUTPAGE page",
+          "feature_id": "F45-UI",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-004",
+          "title": "HOMEPAGE page",
+          "feature_id": "F45-UI",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-005",
+          "title": "LAYOUT page",
+          "feature_id": "F45-UI",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-006",
+          "title": "PRODUCTSPAGE page",
+          "feature_id": "F45-UI",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-001",
+          "title": "Route about",
+          "feature_id": "F45-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-002",
+          "title": "Route products",
+          "feature_id": "F45-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-003",
+          "title": "ABOUTPAGE page",
+          "feature_id": "F45-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-004",
+          "title": "HOMEPAGE page",
+          "feature_id": "F45-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-005",
+          "title": "LAYOUT page",
+          "feature_id": "F45-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F45-UI-006",
+          "title": "PRODUCTSPAGE page",
+          "feature_id": "F45-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    }
+  ]
+}

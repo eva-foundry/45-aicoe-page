@@ -1,0 +1,8 @@
+Work Item Type,Title,Parent,Description,Acceptance Criteria,Tags,Evidence Sources
+Epic,AICOE Public Page,,,,eva,
+Feature,F45-01 EVA Team Structural Alignment,AICOE Public Page,,,eva;feature,
+Feature,F45-02 Bilingual i18n Scaffold,AICOE Public Page,,,eva;feature,
+Feature,F45-03 Layout Shell,AICOE Public Page,,,eva;feature,
+Feature,F45-04 Home Page,AICOE Public Page,,,eva;feature,
+Feature,F45-05 Content Pages,AICOE Public Page,,,eva;feature,
+Feature,F45-06 CI and Test Coverage,AICOE Public Page,,,eva;feature,

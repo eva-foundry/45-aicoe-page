@@ -1,0 +1,58 @@
+{
+  "AICOE": "CCAIA",
+  "AI Centre of Excellence": "Centre d'excellence en IA",
+
+  "Skip to main content": "Passer au contenu principal",
+  "Primary navigation": "Navigation principale",
+
+  "Switch interface language to French": "Passer l'interface en français",
+  "Switch interface language to English": "Switch interface language to English",
+
+  "Home": "Accueil",
+  "About": "À propos",
+  "Products": "Produits",
+  "Contact": "Contact",
+
+  "Welcome to AICOE": "Bienvenue au CCAIA",
+  "Empowering the Government of Canada with responsible AI.": "Outiller le gouvernement du Canada grâce à l'IA responsable.",
+
+  "Our Tools": "Nos outils",
+  "EVA-JP": "EVA-JP",
+  "EVA-JP description": "Assistant bilingue d'IA pour la recherche en jurisprudence.",
+  "EVA Accelerator": "Accélérateur EVA",
+  "EVA Accelerator description": "Portail de réservation en libre-service pour les environnements d'IA.",
+
+  "About AICOE": "À propos du CCAIA",
+  "About description": "Le Centre d'excellence en intelligence artificielle (CCAIA) développe des solutions d'IA responsables, accessibles et bilingues pour le gouvernement du Canada.",
+
+  "Get in touch": "Nous contacter",
+  "Footer note": "Gouvernement du Canada · CCAIA",
+
+  "about.mission.heading": "Notre mission",
+  "about.mission.body": "Le Centre d'excellence en IA collabore avec les ministères du gouvernement du Canada pour concevoir, évaluer et déployer des systèmes d'IA responsables — explicables, bilingues, accessibles et conformes aux politiques du GC.",
+
+  "about.pillars.heading": "Nos piliers",
+  "about.pillar1.title": "IA responsable",
+  "about.pillar1.body": "Nous concevons chaque système en tenant compte de l'équité, de la transparence et de la reddition de comptes.",
+  "about.pillar2.title": "Bilingue dès le départ",
+  "about.pillar2.body": "Tous les produits du CCAIA fonctionnent aussi bien en anglais qu'en français dès le premier jour.",
+  "about.pillar3.title": "Accessible",
+  "about.pillar3.body": "La conformité WCAG 2.1 AA est une exigence impérative — pas une simple case à cocher.",
+
+  "about.contact.body": "Joignez l'équipe du CCAIA par l'intermédiaire de votre liaison en IA ministérielle ou via la plateforme EVA.",
+
+  "products.hero.sub": "Outils d'IA développés par le CCAIA pour le gouvernement du Canada.",
+  "products.section.heading": "Produits disponibles",
+  "products.status.active": "Actif",
+  "products.status.poc": "POC",
+
+  "products.eva-jp.feature1": "RAG hybride sur les index de jurisprudence et de lois",
+  "products.eva-jp.feature2": "Réponses bilingues EN/FR",
+  "products.eva-jp.feature3": "RBAC avec changement de persona (chercheur, commis, admin)",
+  "products.eva-jp.feature4": "Alimenté par Azure AI Search + Azure OpenAI",
+
+  "products.accelerator.feature1": "Réservation en libre-service avec assistant en 3 étapes",
+  "products.accelerator.feature2": "Flux de sondages d'entrée et de sortie pour la gouvernance",
+  "products.accelerator.feature3": "Gestion d'équipe par rôle pour chaque réservation",
+  "products.accelerator.feature4": "Panneau d'assistant IA connecté à EVA Brain v2"
+}

@@ -1,0 +1,44 @@
+# EVA-STORY: F45-06-001
+# Build and lint CI for 45-aicoe-page
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'eva-foundation/45-aicoe-page/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'eva-foundation/45-aicoe-page/**'
+
+defaults:
+  run:
+    working-directory: eva-foundation/45-aicoe-page
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build + Lint + Test
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: eva-foundation/45-aicoe-page/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Type-check + Build
+        run: npm run build
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test -- --run

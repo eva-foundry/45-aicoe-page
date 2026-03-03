@@ -1,0 +1,968 @@
+{
+  "meta": {
+    "schema": "eva.discovery.v2",
+    "generated_at": "2026-02-25T06:38:04.007Z",
+    "repo": "C:\\AICOE\\eva-foundation\\45-aicoe-page"
+  },
+  "project": null,
+  "planned": {
+    "epic": {
+      "title": "AICOE Public Page",
+      "source": "README.md"
+    },
+    "features": [
+      {
+        "id": "F45-01",
+        "title": "EVA Team Structural Alignment",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-02",
+        "title": "Bilingual i18n Scaffold",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-03",
+        "title": "Layout Shell",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-04",
+        "title": "Home Page",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-05",
+        "title": "Content Pages",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-06",
+        "title": "CI and Test Coverage",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI",
+        "title": "UI Pages",
+        "source": "veritas-plan.json"
+      }
+    ],
+    "stories": [
+      {
+        "id": "F45-01-001",
+        "title": "Replace FluentProvider with GCThemeProvider",
+        "feature_id": "F45-01",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-01-002",
+        "title": "Add AnnouncerProvider for WCAG aria-live",
+        "feature_id": "F45-01",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-01-003",
+        "title": "Add HashRouter and React.StrictMode",
+        "feature_id": "F45-01",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-01-004",
+        "title": "Wire @eva shared deps",
+        "feature_id": "F45-01",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-01-005",
+        "title": "Remove @github/spark Vite plugin",
+        "feature_id": "F45-01",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-02-001",
+        "title": "Add i18next with LanguageDetector",
+        "feature_id": "F45-02",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-02-002",
+        "title": "Seed EN and FR locale files",
+        "feature_id": "F45-02",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-03-001",
+        "title": "Build Layout component with skip-link and nav",
+        "feature_id": "F45-03",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-03-002",
+        "title": "Wire route-change announcer effect",
+        "feature_id": "F45-03",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-04-001",
+        "title": "Build HomePage with hero and tool cards",
+        "feature_id": "F45-04",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-05-001",
+        "title": "Build AboutPage route-- COMPLETE 2026-02-24",
+        "feature_id": "F45-05",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-05-002",
+        "title": "Build ProductsPage route-- COMPLETE 2026-02-24",
+        "feature_id": "F45-05",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-06-001",
+        "title": "Add GitHub Actions build + lint CI-- COMPLETE 2026-02-24",
+        "feature_id": "F45-06",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-06-002",
+        "title": "Add Vitest and first component tests-- COMPLETE 2026-02-24",
+        "feature_id": "F45-06",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-001",
+        "title": "Route about",
+        "feature_id": "F45-UI",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-002",
+        "title": "Route products",
+        "feature_id": "F45-UI",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-003",
+        "title": "ABOUTPAGE page",
+        "feature_id": "F45-UI",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-004",
+        "title": "HOMEPAGE page",
+        "feature_id": "F45-UI",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-005",
+        "title": "LAYOUT page",
+        "feature_id": "F45-UI",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-006",
+        "title": "PRODUCTSPAGE page",
+        "feature_id": "F45-UI",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-001",
+        "title": "Route about",
+        "feature_id": "F45-UI",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-002",
+        "title": "Route products",
+        "feature_id": "F45-UI",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-003",
+        "title": "ABOUTPAGE page",
+        "feature_id": "F45-UI",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-004",
+        "title": "HOMEPAGE page",
+        "feature_id": "F45-UI",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-005",
+        "title": "LAYOUT page",
+        "feature_id": "F45-UI",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-UI-006",
+        "title": "PRODUCTSPAGE page",
+        "feature_id": "F45-UI",
+        "done": false,
+        "source": "veritas-plan.json"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "F45-05-001-T01",
+        "title": "Create src/pages/about/AboutPage.tsx",
+        "story_id": "F45-05-001",
+        "feature_id": "F45-05",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-05-001-T02",
+        "title": "Add /about route to App.tsx Routes",
+        "story_id": "F45-05-001",
+        "feature_id": "F45-05",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-05-001-T03",
+        "title": "Add EN/FR locale keys",
+        "story_id": "F45-05-001",
+        "feature_id": "F45-05",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-05-002-T01",
+        "title": "Create src/pages/products/ProductsPage.tsx with EVA product cards",
+        "story_id": "F45-05-002",
+        "feature_id": "F45-05",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-05-002-T02",
+        "title": "Add /products route to App.tsx Routes",
+        "story_id": "F45-05-002",
+        "feature_id": "F45-05",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-05-002-T03",
+        "title": "Add EN/FR locale keys",
+        "story_id": "F45-05-002",
+        "feature_id": "F45-05",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-06-001-T01",
+        "title": "Create .github/workflows/ci.yml: node setup, npm ci --legacy-peer-deps, npm run build, npm run lint",
+        "story_id": "F45-06-001",
+        "feature_id": "F45-06",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-06-002-T01",
+        "title": "Add vitest + @testing-library/react + @testing-library/dom to dev deps",
+        "story_id": "F45-06-002",
+        "feature_id": "F45-06",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-06-002-T02",
+        "title": "Add test for Layout renders skip-link (3 tests)",
+        "story_id": "F45-06-002",
+        "feature_id": "F45-06",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-06-002-T03",
+        "title": "Add test for HomePage renders hero heading (2 tests)",
+        "story_id": "F45-06-002",
+        "feature_id": "F45-06",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F45-06-002-T04",
+        "title": "All 5 tests pass, exit 0",
+        "story_id": "F45-06-002",
+        "feature_id": "F45-06",
+        "done": false,
+        "source": "veritas-plan.json"
+      }
+    ],
+    "acceptance": [],
+    "declared_status": {}
+  },
+  "actual": {
+    "artifacts": [
+      {
+        "path": ".gitignore",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": ".npmrc",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": ".spark-initial-sha",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "ARCHITECTURE.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "eslint.config.js",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "index.html",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "LICENSE",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "package-lock.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "package.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "PLAN.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "PLAN.md.bak",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "README.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "SECURITY.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "spark.meta.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "STATUS.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "TECH-STATUS.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "tsconfig.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "vite.config.ts",
+        "type": "code",
+        "story_tags": [
+          "F45-01-005"
+        ]
+      },
+      {
+        "path": ".github/copilot-instructions.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": ".github/dependabot.yml",
+        "type": "config",
+        "story_tags": []
+      },
+      {
+        "path": "evidence/F45-01-001.py",
+        "type": "evidence",
+        "story_tags": [
+          "F45-01-001"
+        ]
+      },
+      {
+        "path": "evidence/F45-01-002.py",
+        "type": "evidence",
+        "story_tags": [
+          "F45-01-002"
+        ]
+      },
+      {
+        "path": "evidence/F45-01-003.py",
+        "type": "evidence",
+        "story_tags": [
+          "F45-01-003"
+        ]
+      },
+      {
+        "path": "evidence/F45-01-004.py",
+        "type": "evidence",
+        "story_tags": [
+          "F45-01-004"
+        ]
+      },
+      {
+        "path": "evidence/F45-01-005.py",
+        "type": "evidence",
+        "story_tags": [
+          "F45-01-005"
+        ]
+      },
+      {
+        "path": "evidence/F45-02-001.py",
+        "type": "evidence",
+        "story_tags": [
+          "F45-02-001"
+        ]
+      },
+      {
+        "path": "evidence/F45-02-002.py",
+        "type": "evidence",
+        "story_tags": [
+          "F45-02-002"
+        ]
+      },
+      {
+        "path": "evidence/F45-03-001.py",
+        "type": "evidence",
+        "story_tags": [
+          "F45-03-001"
+        ]
+      },
+      {
+        "path": "evidence/F45-03-002.py",
+        "type": "evidence",
+        "story_tags": [
+          "F45-03-002"
+        ]
+      },
+      {
+        "path": "evidence/F45-04-001.py",
+        "type": "evidence",
+        "story_tags": [
+          "F45-04-001"
+        ]
+      },
+      {
+        "path": "src/App.tsx",
+        "type": "code",
+        "story_tags": [
+          "F45-04-001"
+        ]
+      },
+      {
+        "path": "src/ErrorFallback.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/index.css",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "src/main.tsx",
+        "type": "code",
+        "story_tags": [
+          "F45-UI-001",
+          "F45-UI-002",
+          "F45-UI-003",
+          "F45-UI-004",
+          "F45-UI-005",
+          "F45-UI-006",
+          "F45-01-001"
+        ]
+      },
+      {
+        "path": "src/theme.ts",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/vite-end.d.ts",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": ".github/copilot-skills/00-skill-index.skill.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "type": "config",
+        "story_tags": [
+          "F45-06-001"
+        ]
+      },
+      {
+        "path": "src/i18n/i18n.tsx",
+        "type": "code",
+        "story_tags": [
+          "F45-02-001"
+        ]
+      },
+      {
+        "path": "src/hooks/useAnnouncer.ts",
+        "type": "code",
+        "story_tags": [
+          "F45-01-002"
+        ]
+      },
+      {
+        "path": "src/test/HomePage.test.tsx",
+        "type": "test",
+        "story_tags": [
+          "F45-06-002"
+        ],
+        "is_test": true
+      },
+      {
+        "path": "src/test/Layout.test.tsx",
+        "type": "test",
+        "story_tags": [
+          "F45-06-002"
+        ],
+        "is_test": true
+      },
+      {
+        "path": "src/test/setup.ts",
+        "type": "code",
+        "story_tags": [
+          "F45-06-002"
+        ]
+      },
+      {
+        "path": "src/test/test-utils.tsx",
+        "type": "code",
+        "story_tags": [
+          "F45-06-002"
+        ]
+      },
+      {
+        "path": "src/components/Announcement/AnnouncerProvider.tsx",
+        "type": "code",
+        "story_tags": [
+          "F45-01-002"
+        ]
+      },
+      {
+        "path": "src/pages/about/AboutPage.tsx",
+        "type": "code",
+        "story_tags": [
+          "F45-05-001"
+        ]
+      },
+      {
+        "path": "src/pages/home/HomePage.tsx",
+        "type": "code",
+        "story_tags": [
+          "F45-04-001"
+        ]
+      },
+      {
+        "path": "src/pages/products/ProductsPage.tsx",
+        "type": "code",
+        "story_tags": [
+          "F45-05-002"
+        ]
+      },
+      {
+        "path": "src/pages/layout/Layout.tsx",
+        "type": "code",
+        "story_tags": [
+          "F45-03-001"
+        ]
+      },
+      {
+        "path": "src/i18n/locales/en/resources_en.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "src/i18n/locales/fr/resources_fr.json",
+        "type": "data",
+        "story_tags": []
+      }
+    ],
+    "story_artifact_map": {
+      "F45-01-005": {
+        "artifacts": [
+          {
+            "path": "vite.config.ts",
+            "type": "code",
+            "story_tags": [
+              "F45-01-005"
+            ]
+          },
+          {
+            "path": "evidence/F45-01-005.py",
+            "type": "evidence",
+            "story_tags": [
+              "F45-01-005"
+            ]
+          }
+        ]
+      },
+      "F45-01-001": {
+        "artifacts": [
+          {
+            "path": "evidence/F45-01-001.py",
+            "type": "evidence",
+            "story_tags": [
+              "F45-01-001"
+            ]
+          },
+          {
+            "path": "src/main.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-UI-001",
+              "F45-UI-002",
+              "F45-UI-003",
+              "F45-UI-004",
+              "F45-UI-005",
+              "F45-UI-006",
+              "F45-01-001"
+            ]
+          }
+        ]
+      },
+      "F45-01-002": {
+        "artifacts": [
+          {
+            "path": "evidence/F45-01-002.py",
+            "type": "evidence",
+            "story_tags": [
+              "F45-01-002"
+            ]
+          },
+          {
+            "path": "src/hooks/useAnnouncer.ts",
+            "type": "code",
+            "story_tags": [
+              "F45-01-002"
+            ]
+          },
+          {
+            "path": "src/components/Announcement/AnnouncerProvider.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-01-002"
+            ]
+          }
+        ]
+      },
+      "F45-01-003": {
+        "artifacts": [
+          {
+            "path": "evidence/F45-01-003.py",
+            "type": "evidence",
+            "story_tags": [
+              "F45-01-003"
+            ]
+          }
+        ]
+      },
+      "F45-01-004": {
+        "artifacts": [
+          {
+            "path": "evidence/F45-01-004.py",
+            "type": "evidence",
+            "story_tags": [
+              "F45-01-004"
+            ]
+          }
+        ]
+      },
+      "F45-02-001": {
+        "artifacts": [
+          {
+            "path": "evidence/F45-02-001.py",
+            "type": "evidence",
+            "story_tags": [
+              "F45-02-001"
+            ]
+          },
+          {
+            "path": "src/i18n/i18n.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-02-001"
+            ]
+          }
+        ]
+      },
+      "F45-02-002": {
+        "artifacts": [
+          {
+            "path": "evidence/F45-02-002.py",
+            "type": "evidence",
+            "story_tags": [
+              "F45-02-002"
+            ]
+          }
+        ]
+      },
+      "F45-03-001": {
+        "artifacts": [
+          {
+            "path": "evidence/F45-03-001.py",
+            "type": "evidence",
+            "story_tags": [
+              "F45-03-001"
+            ]
+          },
+          {
+            "path": "src/pages/layout/Layout.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-03-001"
+            ]
+          }
+        ]
+      },
+      "F45-03-002": {
+        "artifacts": [
+          {
+            "path": "evidence/F45-03-002.py",
+            "type": "evidence",
+            "story_tags": [
+              "F45-03-002"
+            ]
+          }
+        ]
+      },
+      "F45-04-001": {
+        "artifacts": [
+          {
+            "path": "evidence/F45-04-001.py",
+            "type": "evidence",
+            "story_tags": [
+              "F45-04-001"
+            ]
+          },
+          {
+            "path": "src/App.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-04-001"
+            ]
+          },
+          {
+            "path": "src/pages/home/HomePage.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-04-001"
+            ]
+          }
+        ]
+      },
+      "F45-UI-001": {
+        "artifacts": [
+          {
+            "path": "src/main.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-UI-001",
+              "F45-UI-002",
+              "F45-UI-003",
+              "F45-UI-004",
+              "F45-UI-005",
+              "F45-UI-006",
+              "F45-01-001"
+            ]
+          }
+        ]
+      },
+      "F45-UI-002": {
+        "artifacts": [
+          {
+            "path": "src/main.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-UI-001",
+              "F45-UI-002",
+              "F45-UI-003",
+              "F45-UI-004",
+              "F45-UI-005",
+              "F45-UI-006",
+              "F45-01-001"
+            ]
+          }
+        ]
+      },
+      "F45-UI-003": {
+        "artifacts": [
+          {
+            "path": "src/main.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-UI-001",
+              "F45-UI-002",
+              "F45-UI-003",
+              "F45-UI-004",
+              "F45-UI-005",
+              "F45-UI-006",
+              "F45-01-001"
+            ]
+          }
+        ]
+      },
+      "F45-UI-004": {
+        "artifacts": [
+          {
+            "path": "src/main.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-UI-001",
+              "F45-UI-002",
+              "F45-UI-003",
+              "F45-UI-004",
+              "F45-UI-005",
+              "F45-UI-006",
+              "F45-01-001"
+            ]
+          }
+        ]
+      },
+      "F45-UI-005": {
+        "artifacts": [
+          {
+            "path": "src/main.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-UI-001",
+              "F45-UI-002",
+              "F45-UI-003",
+              "F45-UI-004",
+              "F45-UI-005",
+              "F45-UI-006",
+              "F45-01-001"
+            ]
+          }
+        ]
+      },
+      "F45-UI-006": {
+        "artifacts": [
+          {
+            "path": "src/main.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-UI-001",
+              "F45-UI-002",
+              "F45-UI-003",
+              "F45-UI-004",
+              "F45-UI-005",
+              "F45-UI-006",
+              "F45-01-001"
+            ]
+          }
+        ]
+      },
+      "F45-06-001": {
+        "artifacts": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "type": "config",
+            "story_tags": [
+              "F45-06-001"
+            ]
+          }
+        ]
+      },
+      "F45-06-002": {
+        "artifacts": [
+          {
+            "path": "src/test/HomePage.test.tsx",
+            "type": "test",
+            "story_tags": [
+              "F45-06-002"
+            ],
+            "is_test": true
+          },
+          {
+            "path": "src/test/Layout.test.tsx",
+            "type": "test",
+            "story_tags": [
+              "F45-06-002"
+            ],
+            "is_test": true
+          },
+          {
+            "path": "src/test/setup.ts",
+            "type": "code",
+            "story_tags": [
+              "F45-06-002"
+            ]
+          },
+          {
+            "path": "src/test/test-utils.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-06-002"
+            ]
+          }
+        ]
+      },
+      "F45-05-001": {
+        "artifacts": [
+          {
+            "path": "src/pages/about/AboutPage.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-05-001"
+            ]
+          }
+        ]
+      },
+      "F45-05-002": {
+        "artifacts": [
+          {
+            "path": "src/pages/products/ProductsPage.tsx",
+            "type": "code",
+            "story_tags": [
+              "F45-05-002"
+            ]
+          }
+        ]
+      }
+    },
+    "commit_evidence_map": {}
+  }
+}

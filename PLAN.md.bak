@@ -1,0 +1,81 @@
+# AICOE Public Page -- Implementation Plan
+
+**Project**: 45-aicoe-page
+**Phase 1**: Migration baseline -- COMPLETE 2026-02-22
+**Phase 2**: EVA team alignment -- COMPLETE 2026-02-24 22:38 ET
+**Phase 3**: Content pages + CI -- COMPLETE 2026-02-24
+
+---
+
+## Feature: EVA Team Structural Alignment [ID=F45-01]
+
+Bring 45-aicoe-page to the same structural standard as 44-eva-jp-spark.
+
+### Story: Replace FluentProvider with GCThemeProvider [ID=F45-01-001]
+Remove bare FluentProvider + webLightTheme. Wrap app with GCThemeProvider from @eva/gc-design-system.
+
+### Story: Add AnnouncerProvider for WCAG aria-live [ID=F45-01-002]
+Implement AnnouncerProvider and useAnnouncer hook so route changes are announced to screen readers.
+
+### Story: Add HashRouter and React.StrictMode [ID=F45-01-003]
+Wrap entry with HashRouter and React.StrictMode to match 44-eva-jp-spark bootstrap pattern.
+
+### Story: Wire @eva shared deps [ID=F45-01-004]
+Add file: references to 31-eva-faces shared packages. Add .npmrc with install-links + legacy-peer-deps for Windows.
+
+### Story: Remove @github/spark Vite plugin [ID=F45-01-005]
+Remove sparkPlugin from vite.config.ts and @github/spark from package.json.
+
+---
+
+## Feature: Bilingual i18n Scaffold [ID=F45-02]
+
+### Story: Add i18next with LanguageDetector [ID=F45-02-001]
+Create src/i18n/i18n.tsx: i18next + browser-languagedetector + react-i18next. Detect from localStorage then navigator. Sync document.documentElement.lang on change.
+
+### Story: Seed EN and FR locale files [ID=F45-02-002]
+Create src/i18n/locales/en/resources_en.json and fr/resources_fr.json with all UI keys.
+
+---
+
+## Feature: Layout Shell [ID=F45-03]
+
+### Story: Build Layout component with skip-link and nav [ID=F45-03-001]
+Create src/pages/layout/Layout.tsx with skip-to-main link, brand header, bilingual nav, language toggle, main outlet, footer.
+
+### Story: Wire route-change announcer effect [ID=F45-03-002]
+In Layout.tsx, useEffect on location.pathname: call announce(document.title) and focus mainContent h2 after 150ms.
+
+---
+
+## Feature: Home Page [ID=F45-04]
+
+### Story: Build HomePage with hero and tool cards [ID=F45-04-001]
+Create src/pages/home/HomePage.tsx with hero section, EVA-JP card and EVA Accelerator card grid, About section.
+
+---
+
+## Feature: Content Pages [ID=F45-05]
+
+### Story: Build AboutPage route [ID=F45-05-001] -- COMPLETE 2026-02-24
+- [x] Create src/pages/about/AboutPage.tsx
+- [x] Add /about route to App.tsx Routes
+- [x] Add EN/FR locale keys
+
+### Story: Build ProductsPage route [ID=F45-05-002] -- COMPLETE 2026-02-24
+- [x] Create src/pages/products/ProductsPage.tsx with EVA product cards
+- [x] Add /products route to App.tsx Routes
+- [x] Add EN/FR locale keys
+
+---
+
+## Feature: CI and Test Coverage [ID=F45-06]
+
+### Story: Add GitHub Actions build + lint CI [ID=F45-06-001] -- COMPLETE 2026-02-24
+- [x] Create .github/workflows/ci.yml: node setup, npm ci --legacy-peer-deps, npm run build, npm run lint
+
+### Story: Add Vitest and first component tests [ID=F45-06-002] -- COMPLETE 2026-02-24
+- [x] Add vitest + @testing-library/react + @testing-library/dom to dev deps
+- [x] Add test for Layout renders skip-link (3 tests)
+- [x] Add test for HomePage renders hero heading (2 tests)
+- [x] All 5 tests pass, exit 0
