@@ -1,0 +1,949 @@
+{
+  "meta": {
+    "schema": "eva.export-to-model.v1",
+    "generated_at": "2026-03-08T00:47:31.093Z",
+    "project_id": "45-aicoe-page",
+    "source_files": [
+      "STATUS.md",
+      "PLAN.md"
+    ],
+    "discovery_path": "C:\\eva-foundry\\eva-foundry\\45-aicoe-page\\.eva\\discovery.json",
+    "reconciliation_path": "C:\\eva-foundry\\eva-foundry\\45-aicoe-page\\.eva\\reconciliation.json",
+    "layers_selected": [
+      "wbs",
+      "evidence",
+      "decisions",
+      "risks"
+    ]
+  },
+  "wbs": [
+    {
+      "id": "WBS-45aicoepage",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": null,
+      "label": "Project: 45-aicoe-page",
+      "level": "epic",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 78,
+      "points_done": 0,
+      "stories_total": 26,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-F01",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-45aicoepage",
+      "label": "EVA Team Structural Alignment",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 15,
+      "points_done": 0,
+      "stories_total": 5,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S001",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F01",
+      "label": "Replace FluentProvider with GCThemeProvider",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-01-001"
+    },
+    {
+      "id": "WBS-S002",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F01",
+      "label": "Add AnnouncerProvider for WCAG aria-live",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-01-002"
+    },
+    {
+      "id": "WBS-S003",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F01",
+      "label": "Add HashRouter and React.StrictMode",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-01-003"
+    },
+    {
+      "id": "WBS-S004",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F01",
+      "label": "Wire @eva shared deps",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-01-004"
+    },
+    {
+      "id": "WBS-S005",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F01",
+      "label": "Remove @github/spark Vite plugin",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-01-005"
+    },
+    {
+      "id": "WBS-F02",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-45aicoepage",
+      "label": "Bilingual i18n Scaffold",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 6,
+      "points_done": 0,
+      "stories_total": 2,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S006",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F02",
+      "label": "Add i18next with LanguageDetector",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-02-001"
+    },
+    {
+      "id": "WBS-S007",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F02",
+      "label": "Seed EN and FR locale files",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-02-002"
+    },
+    {
+      "id": "WBS-F03",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-45aicoepage",
+      "label": "Layout Shell",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 6,
+      "points_done": 0,
+      "stories_total": 2,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S008",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F03",
+      "label": "Build Layout component with skip-link and nav",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-03-001"
+    },
+    {
+      "id": "WBS-S009",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F03",
+      "label": "Wire route-change announcer effect",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-03-002"
+    },
+    {
+      "id": "WBS-F04",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-45aicoepage",
+      "label": "Home Page",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "stories_total": 1,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S010",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F04",
+      "label": "Build HomePage with hero and tool cards",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-04-001"
+    },
+    {
+      "id": "WBS-F05",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-45aicoepage",
+      "label": "Content Pages",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 6,
+      "points_done": 0,
+      "stories_total": 2,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S011",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F05",
+      "label": "Build AboutPage route-- COMPLETE 2026-02-24",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-05-001"
+    },
+    {
+      "id": "WBS-S012",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F05",
+      "label": "Build ProductsPage route-- COMPLETE 2026-02-24",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-05-002"
+    },
+    {
+      "id": "WBS-F06",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-45aicoepage",
+      "label": "CI and Test Coverage",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 6,
+      "points_done": 0,
+      "stories_total": 2,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S013",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F06",
+      "label": "Add GitHub Actions build + lint CI-- COMPLETE 2026-02-24",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-06-001"
+    },
+    {
+      "id": "WBS-S014",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F06",
+      "label": "Add Vitest and first component tests-- COMPLETE 2026-02-24",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-06-002"
+    },
+    {
+      "id": "WBS-F07",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-45aicoepage",
+      "label": "UI Pages",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 36,
+      "points_done": 0,
+      "stories_total": 12,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S015",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "Route about",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-001"
+    },
+    {
+      "id": "WBS-S016",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "Route products",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-002"
+    },
+    {
+      "id": "WBS-S017",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "ABOUTPAGE page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-003"
+    },
+    {
+      "id": "WBS-S018",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "HOMEPAGE page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-004"
+    },
+    {
+      "id": "WBS-S019",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "LAYOUT page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-005"
+    },
+    {
+      "id": "WBS-S020",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "PRODUCTSPAGE page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-006"
+    },
+    {
+      "id": "WBS-S021",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "Route about",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-001"
+    },
+    {
+      "id": "WBS-S022",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "Route products",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-002"
+    },
+    {
+      "id": "WBS-S023",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "ABOUTPAGE page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-003"
+    },
+    {
+      "id": "WBS-S024",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "HOMEPAGE page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-004"
+    },
+    {
+      "id": "WBS-S025",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "LAYOUT page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-005"
+    },
+    {
+      "id": "WBS-S026",
+      "project_id": "45-aicoe-page",
+      "parent_wbs_id": "WBS-F07",
+      "label": "PRODUCTSPAGE page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F45-UI-006"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EVD-45aicoepage-D3-001",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-01-005",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "vite.config.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "evidence/F45-01-005.py",
+          "type": "evidence",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-002",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-01-001",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "evidence/F45-01-001.py",
+          "type": "evidence",
+          "is_test": false
+        },
+        {
+          "path": "src/main.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-003",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-01-002",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "evidence/F45-01-002.py",
+          "type": "evidence",
+          "is_test": false
+        },
+        {
+          "path": "src/hooks/useAnnouncer.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/components/Announcement/AnnouncerProvider.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-004",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-01-003",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "evidence/F45-01-003.py",
+          "type": "evidence",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-005",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-01-004",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "evidence/F45-01-004.py",
+          "type": "evidence",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-006",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-02-001",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "evidence/F45-02-001.py",
+          "type": "evidence",
+          "is_test": false
+        },
+        {
+          "path": "src/i18n/i18n.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-007",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-02-002",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "evidence/F45-02-002.py",
+          "type": "evidence",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-008",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-03-001",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "evidence/F45-03-001.py",
+          "type": "evidence",
+          "is_test": false
+        },
+        {
+          "path": "src/pages/layout/Layout.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-009",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-03-002",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "evidence/F45-03-002.py",
+          "type": "evidence",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-010",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-04-001",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "evidence/F45-04-001.py",
+          "type": "evidence",
+          "is_test": false
+        },
+        {
+          "path": "src/App.tsx",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/pages/home/HomePage.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-011",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-UI-001",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/main.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-012",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-UI-002",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/main.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-013",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-UI-003",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/main.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-014",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-UI-004",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/main.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-015",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-UI-005",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/main.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-016",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-UI-006",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/main.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-017",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-06-001",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "type": "config",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-018",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-06-002",
+      "status": "passed",
+      "test_count": 2,
+      "test_passed": 2,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/test/HomePage.test.tsx",
+          "type": "test",
+          "is_test": true
+        },
+        {
+          "path": "src/test/Layout.test.tsx",
+          "type": "test",
+          "is_test": true
+        },
+        {
+          "path": "src/test/setup.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/test/test-utils.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-019",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-05-001",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/pages/about/AboutPage.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-45aicoepage-D3-020",
+      "project_id": "45-aicoe-page",
+      "phase": "D3",
+      "story_id": "F45-05-002",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:31.096Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/pages/products/ProductsPage.tsx",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    }
+  ],
+  "decisions": [],
+  "risks": [],
+  "summary": {
+    "wbs_count": 34,
+    "evidence_count": 20,
+    "decisions_count": 0,
+    "risks_count": 0,
+    "mti_score": null
+  }
+}

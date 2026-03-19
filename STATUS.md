@@ -6,13 +6,13 @@
 ## Summary
 Phase 2 (EVA team alignment) complete. 45-aicoe-page is now structurally on par with 44-eva-jp-spark. Build clean. Veritas MTI=50. Data model updated (rv=3).
 
-## Completed (Phase 1 — 2026-02-22)
+## Completed (Phase 1 ? 2026-02-22)
 - Switched app rendering and fallback UI to Fluent components.
 - Removed shadcn/radix component scaffold and related helper folders.
 - Removed Tailwind/theme scaffold files.
 - Reduced top-level dependencies to currently used runtime packages.
 
-## Completed (Phase 2 — 2026-02-24)
+## Completed (Phase 2 ? 2026-02-24)
 - Replaced bare `FluentProvider + webLightTheme` with `GCThemeProvider` from `@eva/gc-design-system`.
 - Added `AnnouncerProvider` (visually-hidden `role=status` aria-live region) for WCAG compliance.
 - Added `HashRouter` + `React.StrictMode` wrapping.
@@ -40,3 +40,14 @@ Phase 2 (EVA team alignment) complete. 45-aicoe-page is now structurally on par 
 ## Next tasks
 - Add auth posture decision (public-only vs. light authenticated).
 - Expand test coverage to `AboutPage` and `ProductsPage`.
+
+
+---
+
+## 2026-03-03 -- Re-primed by agent:copilot
+
+<!-- eva-primed-status -->
+
+Data model: GET http://localhost:8010/model/projects/45-aicoe-page
+29-foundry agents: C:\eva-foundry\eva-foundation\29-foundry\agents\
+48-eva-veritas: run audit_repo MCP tool
