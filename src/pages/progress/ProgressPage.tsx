@@ -40,6 +40,12 @@ const useStyles = makeStyles({
     gap: tokens.spacingHorizontalL,
     marginTop: tokens.spacingVerticalXL,
   },
+  sourceNote: {
+    display: "block",
+    marginTop: tokens.spacingVerticalM,
+    color: tokens.colorNeutralForegroundOnBrand,
+    opacity: 0.9,
+  },
   statCard: {
     backgroundColor: tokens.colorNeutralBackground1,
   },
@@ -170,6 +176,14 @@ function getPriorityAppearance(priority: string | null) {
   }
 }
 
+function formatPercent(value: number) {
+  return `${Math.round(value * 100)}%`;
+}
+
+function hasOpenWork(board: ProgressBoard) {
+  return Object.entries(board.statusCounts).some(([status, count]) => status !== "Done" && count > 0);
+}
+
 function formatDate(value: string, locale: string) {
   return new Intl.DateTimeFormat(locale, {
     dateStyle: "medium",
@@ -268,6 +282,17 @@ export function ProgressPage() {
   const styles = useStyles();
   const { t, i18n } = useTranslation();
   const locale = i18n.language.startsWith("fr") ? "fr-CA" : "en-CA";
+  const boardCount = progressSnapshot.summary.boardCount;
+  const itemCount = progressSnapshot.summary.itemCount;
+  const doneCount = progressSnapshot.summary.statusCounts.Done ?? 0;
+  const inProgressCount = progressSnapshot.summary.statusCounts["In Progress"] ?? 0;
+  const todoCount = progressSnapshot.summary.statusCounts.Todo ?? 0;
+  const highPriorityCount = progressSnapshot.summary.priorityCounts.High ?? 0;
+  const activeBoardCount = progressSnapshot.boards.filter(hasOpenWork).length;
+  const completionRate = itemCount === 0 ? 0 : doneCount / itemCount;
+  const activeRate = itemCount === 0 ? 0 : inProgressCount / itemCount;
+  const backlogRate = itemCount === 0 ? 0 : todoCount / itemCount;
+  const highPriorityRate = itemCount === 0 ? 0 : highPriorityCount / itemCount;
   const activeItems = sortItems(
     progressSnapshot.boards.flatMap((board) =>
       board.items.filter((item) => item.status !== "Done")
@@ -278,7 +303,6 @@ export function ProgressPage() {
       board.items.filter((item) => item.status === "Done")
     )
   ).slice(0, 8);
-  const inProgressCount = getCount(progressSnapshot.summary.statusCounts, "In Progress");
 
   return (
     <>
@@ -289,17 +313,20 @@ export function ProgressPage() {
           </h2>
         </Title1>
         <Body1 className={styles.heroSub}>{t("progress.hero.sub")}</Body1>
+        <Caption1 className={styles.sourceNote}>
+          {t("progress.source.live")}
+        </Caption1>
         <div className={styles.statGrid}>
           <Card className={styles.statCard}>
             <CardHeader
               header={<Caption1>{t("progress.stat.boards")}</Caption1>}
-              description={<span className={styles.statValue}>{progressSnapshot.summary.boardCount}</span>}
+              description={<span className={styles.statValue}>{boardCount}</span>}
             />
           </Card>
           <Card className={styles.statCard}>
             <CardHeader
               header={<Caption1>{t("progress.stat.items")}</Caption1>}
-              description={<span className={styles.statValue}>{progressSnapshot.summary.itemCount}</span>}
+              description={<span className={styles.statValue}>{itemCount}</span>}
             />
           </Card>
           <Card className={styles.statCard}>
@@ -312,6 +339,42 @@ export function ProgressPage() {
             <CardHeader
               header={<Caption1>{t("progress.stat.lastSync")}</Caption1>}
               description={<span className={styles.statValue}>{formatDate(progressSnapshot.generatedAt, locale)}</span>}
+            />
+          </Card>
+        </div>
+      </section>
+
+      <section className={styles.section} aria-labelledby="metrics-heading">
+        <Title2 id="metrics-heading" className={styles.sectionHeader}>{t("progress.section.metrics")}</Title2>
+        <div className={styles.statGrid}>
+          <Card className={styles.statCard}>
+            <CardHeader
+              header={<Caption1>{t("progress.metric.completion")}</Caption1>}
+              description={<span className={styles.statValue}>{formatPercent(completionRate)}</span>}
+            />
+          </Card>
+          <Card className={styles.statCard}>
+            <CardHeader
+              header={<Caption1>{t("progress.metric.boardsActive")}</Caption1>}
+              description={<span className={styles.statValue}>{`${activeBoardCount}/${boardCount}`}</span>}
+            />
+          </Card>
+          <Card className={styles.statCard}>
+            <CardHeader
+              header={<Caption1>{t("progress.metric.highPriority")}</Caption1>}
+              description={<span className={styles.statValue}>{formatPercent(highPriorityRate)}</span>}
+            />
+          </Card>
+          <Card className={styles.statCard}>
+            <CardHeader
+              header={<Caption1>{t("progress.metric.backlog")}</Caption1>}
+              description={<span className={styles.statValue}>{formatPercent(backlogRate)}</span>}
+            />
+          </Card>
+          <Card className={styles.statCard}>
+            <CardHeader
+              header={<Caption1>{t("progress.metric.inProgressShare")}</Caption1>}
+              description={<span className={styles.statValue}>{formatPercent(activeRate)}</span>}
             />
           </Card>
         </div>

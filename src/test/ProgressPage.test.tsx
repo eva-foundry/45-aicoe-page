@@ -20,4 +20,9 @@ describe("ProgressPage", () => {
     renderWithProviders(<ProgressPage />);
     expect(screen.getByText("progress.section.boards")).toBeInTheDocument();
   });
+
+  it("renders the calculated metrics section", () => {
+    renderWithProviders(<ProgressPage />);
+    expect(screen.getByText("progress.section.metrics")).toBeInTheDocument();
+  });
 });
