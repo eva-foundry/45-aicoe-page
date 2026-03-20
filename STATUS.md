@@ -2,7 +2,7 @@
 
 ## Date
 
-2026-03-20 11:34 UTC
+2026-03-20 15:42 UTC
 
 ## Summary
 
@@ -24,18 +24,19 @@ Phase 4 progress-publication packet complete. 45-aicoe-page now exposes EVA Foun
 - `npm run build` exits 0.
 - `npm run lint` exits 0.
 - `npm run test -- --run` exits 0. 7 tests passed.
-- Remote verification check on 2026-03-20 confirms the GitHub repository currently exposes only `CI` and `Dependabot Updates`; `.github/workflows/pages.yml` exists locally but is not yet present on the remote default branch, so live GitHub Pages dispatch remains blocked until these changes are landed.
+- GitHub repo `eva-foundry/45-aicoe-page` now exposes `Publish Progress Page` on the remote default branch after landing commit `cc97d2f`.
+- CI run `23350226409` completed successfully on GitHub.
+- GitHub Pages publish run `23350334823` completed successfully on `workflow_dispatch` after Pages enablement.
+- Public Pages URL `https://eva-foundry.github.io/45-aicoe-page/` returns HTTP `200`.
+- msub wiring validated: managed identity `msub-kernel-engine-identity` now has federated credential `github-45-aicoe-page-main`, repo secrets `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SUBSCRIPTION_ID` are configured, and Key Vault `msubsandkv202603031449` provided `github-pat-projects` during the publish workflow.
 
 ## Residual Risks
 
 - The production Vite bundle still emits a chunk-size warning around the main JS bundle; this is non-blocking for publish.
-- The new Pages workflow requires repo or org availability of `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SUBSCRIPTION_ID`.
-- End-to-end GitHub Pages publication cannot be validated from GitHub until the local Pages workflow and related site changes are committed and pushed to the repository.
+- GitHub Pages depends on the `msub-kernel-engine-identity` federated credential and the three repo-level Azure secrets remaining intact.
 
 ## Next Tasks
 
-- Land the current 45-aicoe-page working tree to the remote repository so `Publish Progress Page` exists on GitHub and can be dispatched.
-- After landing, run a manual workflow dispatch and confirm the published Pages URL and artifact contents.
 - If needed, split the progress route into lazy-loaded chunks to remove the current bundle-size warning.
 - If needed, add a second public slice focused only on portfolio KPIs for executive reporting.
 
