@@ -9,7 +9,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { ErrorBoundary } from "react-error-boundary";
-import { GCThemeProvider } from "@eva/gc-design-system";
+import { FluentProvider, webLightTheme } from "@fluentui/react-components";
 import { HashRouter } from "react-router-dom";
 import { AnnouncerProvider } from "./components/Announcement/AnnouncerProvider";
 import "./i18n/i18n";
@@ -21,7 +21,7 @@ import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <GCThemeProvider>
+    <FluentProvider theme={webLightTheme}>
       <AnnouncerProvider>
         <HashRouter>
           <ErrorBoundary FallbackComponent={ErrorFallback}>
@@ -29,6 +29,6 @@ createRoot(document.getElementById("root")!).render(
           </ErrorBoundary>
         </HashRouter>
       </AnnouncerProvider>
-    </GCThemeProvider>
+    </FluentProvider>
   </React.StrictMode>
 );

@@ -5,15 +5,15 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "generate:progress": "node ./scripts/generate-progress-snapshot.mjs",
         "build": "tsc -p tsconfig.json --noEmit && vite build",
+        "build:pages": "npm run generate:progress && npm run build",
         "typecheck": "tsc -p tsconfig.json --noEmit",
         "lint": "eslint src --ext .ts,.tsx --report-unused-disable-directives --max-warnings 0",
         "test": "vitest",
         "preview": "vite preview"
     },
     "dependencies": {
-        "@eva/gc-design-system": "file:../31-eva-faces/shared/gc-design-system",
-        "@eva/ui": "file:../31-eva-faces/shared/eva-ui",
         "@fluentui/react-components": "^9.61.0",
         "@fluentui/react-icons": "^2.0.268",
         "i18next": "^25.0.0",

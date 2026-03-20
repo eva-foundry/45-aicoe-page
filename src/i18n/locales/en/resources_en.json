@@ -11,6 +11,7 @@
   "Home": "Home",
   "About": "About",
   "Products": "Products",
+  "Progress": "Progress",
   "Contact": "Contact",
 
   "Welcome to AICOE": "Welcome to AICOE",
@@ -54,4 +55,23 @@
   "products.accelerator.feature1": "Self-service workspace booking with 3-step wizard",
   "products.accelerator.feature2": "Entry and exit survey workflows for governance",
   "products.accelerator.feature3": "Role-based team management per booking",
-  "products.accelerator.feature4": "AI assistant panel wired to EVA Brain v2"}
+  "products.accelerator.feature4": "AI assistant panel wired to EVA Brain v2",
+
+  "progress.hero.sub": "Read-only delivery visibility for EVA Foundry, refreshed from the live GitHub Project boards and published as a public status surface.",
+  "progress.stat.boards": "Boards tracked",
+  "progress.stat.items": "Work items",
+  "progress.stat.inProgress": "In progress",
+  "progress.stat.lastSync": "Last sync",
+  "progress.section.boards": "Board overview",
+  "progress.section.active": "Currently moving",
+  "progress.section.done": "Recently finished",
+  "progress.board.items": "Items",
+  "progress.board.inProgress": "Moving",
+  "progress.board.updated": "Updated",
+  "progress.board.complete": "Completion",
+  "progress.board.open": "Open board",
+  "progress.item.repo": "Repository",
+  "progress.item.updated": "Updated",
+  "progress.item.open": "View item",
+  "progress.empty": "No matching work items are in the current snapshot."
+}

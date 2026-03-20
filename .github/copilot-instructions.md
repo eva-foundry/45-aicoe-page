@@ -3,7 +3,7 @@
 # GitHub Copilot Instructions -- AICOE Public Page
 
 **Template Version**: 7.0.0 (Session 71 - project authority contract)  
-**Last Updated**: 2026-03-15  
+**Last Updated**: 2026-03-20T15:10:00Z  
 **Project**: AICOE Public Page  
 **Path**: C:\eva-foundry\45-aicoe-page\
 
@@ -106,29 +106,33 @@ Document only the project-specific facts that do not belong in workspace instruc
 
 Replace the placeholders below during project customization.
 
-**Status**: poc  
-**Current Phase**: Phase 3 -- Content Pages + CI -- COMPLETE  
-**Dependencies**: See README.md, PLAN.md, and project_work records in the data model.  
-**Primary Stack**: [TODO: Update stack]
+**Status**: active  
+**Current Phase**: Phase 4 -- Public Progress Publication -- COMPLETE  
+**Dependencies**: GitHub Project v2 board data, GitHub Pages workflow, Azure OIDC access for Key Vault secret retrieval in CI, and the data model governance surfaces referenced in README.md, PLAN.md, STATUS.md, and project_work records.  
+**Primary Stack**: React 19, TypeScript 5, Vite 7, Fluent UI v9, React Router, i18next, Vitest
 
 ### Local Commands
 
 List the real commands used in this project:
-- build: [TODO: Add build command]
-- test: [TODO: Add test command]
-- lint: [TODO: Add lint command]
-- run: [TODO: Add run command]
+- build: `npm run build`
+- build-pages: `npm run build:pages`
+- generate-progress: `npm run generate:progress`
+- test: `npm run test -- --run`
+- lint: `npm run lint`
+- typecheck: `npm run typecheck`
+- run: `npm run dev`
 
 ### Local Patterns
 
-- [TODO: Add the main project-specific implementation pattern]
-- [TODO: Add the most important integration or deployment pattern]
-- [TODO: Add any local exception or code organization rule]
+- The site is a public, read-only SPA that uses `HashRouter` and pre-generated TypeScript snapshot data instead of live client-side GitHub API calls.
+- The progress route is generated at build time from the five `eva-foundry` GitHub Project v2 boards via `scripts/generate-progress-snapshot.mjs`, which writes `src/data/progressSnapshot.ts`.
+- GitHub Pages publication is handled by `.github/workflows/pages.yml`; CI retrieves `github-pat-projects` from Key Vault `msubsandkv202603031449` using Azure OIDC so the token is not stored directly in the repository.
 
 ### Local Risks Or Exceptions
 
-- [TODO: Add the main delivery or runtime risk]
-- [TODO: Add the next most important project-specific hazard]
+- Progress snapshot generation requires `GH_PROJECTS_TOKEN` or `GH_TOKEN`; without one of those, `npm run generate:progress` fails by design.
+- GitHub Pages publication depends on `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SUBSCRIPTION_ID` being available to the repository or organization and authorized to read Key Vault secrets.
+- The current production bundle emits a non-blocking Vite chunk-size warning; treat it as a hardening follow-up, not a publish blocker.
 
 ---
 
@@ -136,6 +140,7 @@ List the real commands used in this project:
 
 Before commit or handoff:
 - run the repo-native validation commands that exist
+- run `npm run generate:progress` when a Projects-capable token is available and the packet touches the public progress surface
 - verify changed behavior with the smallest relevant check
 - update `STATUS.md` if the task changed delivery state, scope, or risk
 - save evidence if validation or automation was part of the work

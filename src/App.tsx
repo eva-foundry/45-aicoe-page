@@ -4,6 +4,7 @@ import { Layout } from "./pages/layout/Layout";
 import { HomePage } from "./pages/home/HomePage";
 import { AboutPage } from "./pages/about/AboutPage";
 import { ProductsPage } from "./pages/products/ProductsPage";
+import { ProgressPage } from "./pages/progress/ProgressPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="products" element={<ProductsPage />} />
+        <Route path="progress" element={<ProgressPage />} />
       </Route>
     </Routes>
   );

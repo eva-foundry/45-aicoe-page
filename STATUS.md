@@ -1,18 +1,57 @@
 # Status
 
 ## Date
-2026-02-24 23:00 ET
+
+2026-03-20 11:34 UTC
 
 ## Summary
+
+Phase 4 progress-publication packet complete. 45-aicoe-page now exposes EVA Foundry delivery progress at `/progress` and includes a GitHub Pages workflow that regenerates a read-only Project v2 snapshot before publish.
+
+## Completed (Phase 4 -- 2026-03-20)
+
+- Added `ProgressPage` and `/progress` route with board overview, active work, and recently finished work sections.
+- Added `scripts/generate-progress-snapshot.mjs` to query the five EVA Foundry Project v2 boards and emit `src/data/progressSnapshot.ts`.
+- Generated a live snapshot with 66 items across 5 boards.
+- Added `.github/workflows/pages.yml` to publish the site to GitHub Pages on push, manual dispatch, and every 30 minutes.
+- Removed workspace-only file dependencies so the repo builds as a standalone GitHub repository in Actions.
+- Corrected `.github/workflows/ci.yml` so push and PR validation run from the actual repo root.
+- Added progress-page tests and expanded navigation coverage.
+
+## Validation
+
+- `npm run generate:progress` exits 0.
+- `npm run build` exits 0.
+- `npm run lint` exits 0.
+- `npm run test -- --run` exits 0. 7 tests passed.
+- Remote verification check on 2026-03-20 confirms the GitHub repository currently exposes only `CI` and `Dependabot Updates`; `.github/workflows/pages.yml` exists locally but is not yet present on the remote default branch, so live GitHub Pages dispatch remains blocked until these changes are landed.
+
+## Residual Risks
+
+- The production Vite bundle still emits a chunk-size warning around the main JS bundle; this is non-blocking for publish.
+- The new Pages workflow requires repo or org availability of `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SUBSCRIPTION_ID`.
+- End-to-end GitHub Pages publication cannot be validated from GitHub until the local Pages workflow and related site changes are committed and pushed to the repository.
+
+## Next Tasks
+
+- Land the current 45-aicoe-page working tree to the remote repository so `Publish Progress Page` exists on GitHub and can be dispatched.
+- After landing, run a manual workflow dispatch and confirm the published Pages URL and artifact contents.
+- If needed, split the progress route into lazy-loaded chunks to remove the current bundle-size warning.
+- If needed, add a second public slice focused only on portfolio KPIs for executive reporting.
+
+## Historical Baseline (2026-02-24)
+
 Phase 2 (EVA team alignment) complete. 45-aicoe-page is now structurally on par with 44-eva-jp-spark. Build clean. Veritas MTI=50. Data model updated (rv=3).
 
 ## Completed (Phase 1 ? 2026-02-22)
+
 - Switched app rendering and fallback UI to Fluent components.
 - Removed shadcn/radix component scaffold and related helper folders.
 - Removed Tailwind/theme scaffold files.
 - Reduced top-level dependencies to currently used runtime packages.
 
 ## Completed (Phase 2 ? 2026-02-24)
+
 - Replaced bare `FluentProvider + webLightTheme` with `GCThemeProvider` from `@eva/gc-design-system`.
 - Added `AnnouncerProvider` (visually-hidden `role=status` aria-live region) for WCAG compliance.
 - Added `HashRouter` + `React.StrictMode` wrapping.
@@ -24,10 +63,12 @@ Phase 2 (EVA team alignment) complete. 45-aicoe-page is now structurally on par 
 - Build exits 0: `tsc --noEmit` zero errors + Vite 2120 modules transformed.
 - `.npmrc` set with `install-links=true` + `legacy-peer-deps=true`.
 
-## Validation
+## Historical Validation
+
 - `npm run build` exits 0, zero TS errors, zero Vite errors.
 
 ## Completed (Phase 3 -- 2026-02-24)
+
 - Built `AboutPage` (`/about`): hero, mission, three pillars (Responsible AI / Bilingual by Design / Accessible), contact section.
 - Built `ProductsPage` (`/products`): product cards for EVA-JP (active) and EVA Accelerator (poc) with feature lists.
 - Added EN/FR locale keys for both pages to `resources_en.json` and `resources_fr.json`.
@@ -37,10 +78,10 @@ Phase 2 (EVA team alignment) complete. 45-aicoe-page is now structurally on par 
 - 5 component tests passing: 3 Layout, 2 HomePage -- exit 0, zero errors.
 - `npm run build` + `npm run lint` + `npm run test -- --run` all exit 0.
 
-## Next tasks
+## Historical Next Tasks
+
 - Add auth posture decision (public-only vs. light authenticated).
 - Expand test coverage to `AboutPage` and `ProductsPage`.
-
 
 ---
 
@@ -48,6 +89,6 @@ Phase 2 (EVA team alignment) complete. 45-aicoe-page is now structurally on par 
 
 <!-- eva-primed-status -->
 
-Data model: GET http://localhost:8010/model/projects/45-aicoe-page
+Data model: `GET <http://localhost:8010/model/projects/45-aicoe-page>`
 29-foundry agents: C:\eva-foundry\eva-foundation\29-foundry\agents\
 48-eva-veritas: run audit_repo MCP tool

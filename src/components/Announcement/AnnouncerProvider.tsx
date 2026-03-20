@@ -1,6 +1,6 @@
 // EVA-STORY: F45-01-002
 /* eslint-disable react-refresh/only-export-components -- context + provider intentionally co-located */
-import React, { createContext, useCallback, useRef, useState } from "react";
+import React, { createContext, useCallback, useEffect, useRef, useState } from "react";
 import { makeStyles } from "@fluentui/react-components";
 
 // ─── Context ─────────────────────────────────────────────────────────────────
@@ -43,6 +43,15 @@ export function AnnouncerProvider({ children }: AnnouncerProviderProps) {
     setMessage("");
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => setMessage(msg), 50);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    };
   }, []);
 
   return (

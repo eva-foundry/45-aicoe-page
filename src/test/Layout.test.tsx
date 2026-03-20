@@ -23,6 +23,7 @@ describe("Layout", () => {
     expect(screen.getByText("Home")).toBeInTheDocument();
     expect(screen.getByText("About")).toBeInTheDocument();
     expect(screen.getByText("Products")).toBeInTheDocument();
+    expect(screen.getByText("Progress")).toBeInTheDocument();
   });
 
   it("renders the language toggle button showing FR", () => {

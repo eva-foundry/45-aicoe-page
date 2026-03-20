@@ -1,0 +1,89 @@
+name: Publish Progress Page
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "*/30 * * * *"
+
+permissions:
+  contents: read
+  id-token: write
+  pages: write
+
+concurrency:
+  group: aicoe-progress-pages
+  cancel-in-progress: true
+
+env:
+  KEY_VAULT_NAME: msubsandkv202603031449
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate Azure OIDC configuration
+        shell: bash
+        run: |
+          test -n "${{ secrets.AZURE_CLIENT_ID }}" || (echo "[FAIL] Missing AZURE_CLIENT_ID" && exit 1)
+          test -n "${{ secrets.AZURE_TENANT_ID }}" || (echo "[FAIL] Missing AZURE_TENANT_ID" && exit 1)
+          test -n "${{ secrets.AZURE_SUBSCRIPTION_ID }}" || (echo "[FAIL] Missing AZURE_SUBSCRIPTION_ID" && exit 1)
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Retrieve GitHub Projects token from Key Vault
+        id: projects-token
+        shell: bash
+        run: |
+          TOKEN=$(az keyvault secret show --vault-name "$KEY_VAULT_NAME" --name github-pat-projects --query value -o tsv)
+          test -n "$TOKEN" || (echo "[FAIL] github-pat-projects secret not found" && exit 1)
+          echo "::add-mask::$TOKEN"
+          echo "token=$TOKEN" >> "$GITHUB_OUTPUT"
+
+      - name: Generate board snapshot
+        env:
+          GH_PROJECTS_TOKEN: ${{ steps.projects-token.outputs.token }}
+        run: npm run generate:progress
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

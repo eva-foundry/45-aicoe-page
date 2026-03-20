@@ -114,6 +114,7 @@ export function Layout() {
           <NavLink to="/" className={styles.navLink}>{t("Home")}</NavLink>
           <NavLink to="/about" className={styles.navLink}>{t("About")}</NavLink>
           <NavLink to="/products" className={styles.navLink}>{t("Products")}</NavLink>
+          <NavLink to="/progress" className={styles.navLink}>{t("Progress")}</NavLink>
           <button
             className={styles.langToggle}
             onClick={toggleLang}
