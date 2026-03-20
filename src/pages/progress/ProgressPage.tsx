@@ -143,12 +143,12 @@ function getPriorityWeight(priority: string | null) {
 
 function sortItems(items: ProgressItem[]) {
   return [...items].sort((left, right) => {
-    const priorityDelta = getPriorityWeight(right.priority) - getPriorityWeight(left.priority);
-    if (priorityDelta !== 0) {
-      return priorityDelta;
+    const updatedDelta = Date.parse(right.updatedAt) - Date.parse(left.updatedAt);
+    if (updatedDelta !== 0) {
+      return updatedDelta;
     }
 
-    return Date.parse(right.updatedAt) - Date.parse(left.updatedAt);
+    return getPriorityWeight(right.priority) - getPriorityWeight(left.priority);
   });
 }
 
