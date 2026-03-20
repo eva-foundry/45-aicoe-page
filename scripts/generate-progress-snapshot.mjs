@@ -3,6 +3,34 @@ import { resolve } from "node:path";
 
 const organization = "eva-foundry";
 const outputPath = resolve("src/data/progressSnapshot.ts");
+const coreProjectNumbers = new Set([
+  14,
+  19,
+  22,
+  28,
+  29,
+  30,
+  34,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  45,
+  48,
+  49,
+  50,
+  51,
+  52,
+  57,
+  58,
+  59,
+  60,
+  61,
+  62,
+  63,
+]);
 const projectDefinitions = [
   { number: 1, summary: "Portfolio-wide roadmap and delivery priorities." },
   { number: 2, summary: "Production services currently advancing through delivery." },
@@ -93,6 +121,15 @@ function parseBodyValue(body, label) {
   return match ? match[1].trim() : null;
 }
 
+function getProjectNumber(repository) {
+  if (!repository) {
+    return null;
+  }
+
+  const match = repository.match(/\/(\d+)-/);
+  return match ? Number(match[1]) : null;
+}
+
 async function fetchProject(number) {
   const response = await fetch("https://api.github.com/graphql", {
     method: "POST",
@@ -175,11 +212,12 @@ for (const definition of projectDefinitions) {
     summary: definition.summary,
   };
   const items = project.items.nodes.map((node) => buildItem(node, board));
+  const filteredItems = items.filter((item) => coreProjectNumbers.has(getProjectNumber(item.repository)));
   const statusCounts = {};
   const priorityCounts = {};
   const sprintCounts = {};
 
-  for (const item of items) {
+  for (const item of filteredItems) {
     increment(statusCounts, item.status);
     increment(summary.statusCounts, item.status);
 
@@ -193,15 +231,19 @@ for (const definition of projectDefinitions) {
     }
   }
 
-  summary.itemCount += items.length;
+  if (filteredItems.length === 0) {
+    continue;
+  }
+
+  summary.itemCount += filteredItems.length;
 
   boards.push({
     ...board,
-    itemCount: items.length,
+    itemCount: filteredItems.length,
     statusCounts,
     priorityCounts,
     sprintCounts,
-    items: items.sort((left, right) => Date.parse(right.updatedAt) - Date.parse(left.updatedAt)),
+    items: filteredItems.sort((left, right) => Date.parse(right.updatedAt) - Date.parse(left.updatedAt)),
   });
 }
 

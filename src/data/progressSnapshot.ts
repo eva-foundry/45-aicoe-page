@@ -1,19 +1,18 @@
 import type { ProgressSnapshot } from "./progressTypes";
 
 export const progressSnapshot: ProgressSnapshot = {
-  "generatedAt": "2026-03-20T14:54:33.478Z",
+  "generatedAt": "2026-03-20T16:28:16.875Z",
   "organization": "eva-foundry",
   "summary": {
     "boardCount": 5,
-    "itemCount": 66,
+    "itemCount": 27,
     "statusCounts": {
-      "In Progress": 30,
-      "Done": 33,
-      "Todo": 3
+      "Done": 18,
+      "In Progress": 9
     },
     "priorityCounts": {
-      "High": 45,
-      "Medium": 21
+      "High": 18,
+      "Medium": 9
     }
   },
   "boards": [
@@ -22,110 +21,19 @@ export const progressSnapshot: ProgressSnapshot = {
       "title": "EVA Foundry Roadmap",
       "url": "https://github.com/orgs/eva-foundry/projects/1",
       "summary": "Portfolio-wide roadmap and delivery priorities.",
-      "itemCount": 22,
+      "itemCount": 9,
       "statusCounts": {
-        "In Progress": 10,
-        "Done": 11,
-        "Todo": 1
+        "Done": 6,
+        "In Progress": 3
       },
       "priorityCounts": {
-        "High": 15,
-        "Medium": 7
+        "High": 6,
+        "Medium": 3
       },
       "sprintCounts": {
-        "Sprint 11": 2
+        "Sprint 11": 1
       },
       "items": [
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSKE",
-          "type": "DRAFT_ISSUE",
-          "title": "[18-azure-best] Agent checklists for all entries",
-          "status": "Done",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/18-azure-best",
-          "repositoryUrl": "https://github.com/eva-foundry/18-azure-best",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:54Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSJ8",
-          "type": "DRAFT_ISSUE",
-          "title": "[18-azure-best] 32 best practice entries documented",
-          "status": "Done",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/18-azure-best",
-          "repositoryUrl": "https://github.com/eva-foundry/18-azure-best",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:53Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSJk",
-          "type": "DRAFT_ISSUE",
-          "title": "[98-system-analysis] Cost analysis automation",
-          "status": "Todo",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/98-system-analysis",
-          "repositoryUrl": "https://github.com/eva-foundry/98-system-analysis",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:51Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSIk",
-          "type": "DRAFT_ISSUE",
-          "title": "[98-system-analysis] Subscription inventory (3 subs, 1,484+ resources)",
-          "status": "Done",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/98-system-analysis",
-          "repositoryUrl": "https://github.com/eva-foundry/98-system-analysis",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:50Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSH8",
-          "type": "DRAFT_ISSUE",
-          "title": "[44-eva-jp-spark] GC deployment readiness",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/44-eva-jp-spark",
-          "repositoryUrl": "https://github.com/eva-foundry/44-eva-jp-spark",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:49Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSG0",
-          "type": "DRAFT_ISSUE",
-          "title": "[44-eva-jp-spark] Phase 3 bilingual AI assistant",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/44-eva-jp-spark",
-          "repositoryUrl": "https://github.com/eva-foundry/44-eva-jp-spark",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:47Z"
-        },
         {
           "id": "PVTI_lADOD6FkPc4BQr0uzgnzSGg",
           "type": "DRAFT_ISSUE",
@@ -260,111 +168,6 @@ export const progressSnapshot: ProgressSnapshot = {
           "repositoryUrl": "https://github.com/eva-foundry/37-data-model",
           "itemUrl": null,
           "updatedAt": "2026-03-20T10:25:36Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSEY",
-          "type": "DRAFT_ISSUE",
-          "title": "[33-eva-brain-v2] FastAPI backend stability fixes",
-          "status": "In Progress",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/33-eva-brain-v2",
-          "repositoryUrl": "https://github.com/eva-foundry/33-eva-brain-v2",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:35Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSEQ",
-          "type": "DRAFT_ISSUE",
-          "title": "[33-eva-brain-v2] Endpoint status reconciliation",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/33-eva-brain-v2",
-          "repositoryUrl": "https://github.com/eva-foundry/33-eva-brain-v2",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:33Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSEI",
-          "type": "DRAFT_ISSUE",
-          "title": "[33-eva-brain-v2] Complete Sprint 11 Phase 1+2 foundation",
-          "status": "Done",
-          "priority": "High",
-          "sprint": "Sprint 11",
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/33-eva-brain-v2",
-          "repositoryUrl": "https://github.com/eva-foundry/33-eva-brain-v2",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:32Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSD8",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Full regression test suite (231 tests)",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:31Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSDw",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Implement project lock modal",
-          "status": "Done",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:29Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSDo",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Fix apps page dialog state management",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:28Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0uzgnzSDY",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Complete WI20 test implementation",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 1,
-          "boardTitle": "EVA Foundry Roadmap",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/1",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:27Z"
         }
       ]
     },
@@ -373,49 +176,17 @@ export const progressSnapshot: ProgressSnapshot = {
       "title": "Production Services",
       "url": "https://github.com/orgs/eva-foundry/projects/2",
       "summary": "Production services currently advancing through delivery.",
-      "itemCount": 15,
+      "itemCount": 6,
       "statusCounts": {
-        "In Progress": 9,
-        "Done": 6
+        "Done": 4,
+        "In Progress": 2
       },
       "priorityCounts": {
-        "High": 11,
-        "Medium": 4
+        "High": 4,
+        "Medium": 2
       },
-      "sprintCounts": {
-        "Sprint 11": 1
-      },
+      "sprintCounts": {},
       "items": [
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0vzgnzUC4",
-          "type": "DRAFT_ISSUE",
-          "title": "[44-eva-jp-spark] GC deployment readiness",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 2,
-          "boardTitle": "Production Services",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/2",
-          "repository": "eva-foundry/44-eva-jp-spark",
-          "repositoryUrl": "https://github.com/eva-foundry/44-eva-jp-spark",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:21Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0vzgnzUCo",
-          "type": "DRAFT_ISSUE",
-          "title": "[44-eva-jp-spark] Phase 3 bilingual AI assistant",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 2,
-          "boardTitle": "Production Services",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/2",
-          "repository": "eva-foundry/44-eva-jp-spark",
-          "repositoryUrl": "https://github.com/eva-foundry/44-eva-jp-spark",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:20Z"
-        },
         {
           "id": "PVTI_lADOD6FkPc4BQr0vzgnzUCc",
           "type": "DRAFT_ISSUE",
@@ -505,111 +276,6 @@ export const progressSnapshot: ProgressSnapshot = {
           "repositoryUrl": "https://github.com/eva-foundry/37-data-model",
           "itemUrl": null,
           "updatedAt": "2026-03-20T10:26:13Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0vzgnzUBM",
-          "type": "DRAFT_ISSUE",
-          "title": "[33-eva-brain-v2] FastAPI backend stability fixes",
-          "status": "In Progress",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 2,
-          "boardTitle": "Production Services",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/2",
-          "repository": "eva-foundry/33-eva-brain-v2",
-          "repositoryUrl": "https://github.com/eva-foundry/33-eva-brain-v2",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:12Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0vzgnzUBA",
-          "type": "DRAFT_ISSUE",
-          "title": "[33-eva-brain-v2] Endpoint status reconciliation",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 2,
-          "boardTitle": "Production Services",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/2",
-          "repository": "eva-foundry/33-eva-brain-v2",
-          "repositoryUrl": "https://github.com/eva-foundry/33-eva-brain-v2",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:10Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0vzgnzUA0",
-          "type": "DRAFT_ISSUE",
-          "title": "[33-eva-brain-v2] Complete Sprint 11 Phase 1+2 foundation",
-          "status": "Done",
-          "priority": "High",
-          "sprint": "Sprint 11",
-          "boardNumber": 2,
-          "boardTitle": "Production Services",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/2",
-          "repository": "eva-foundry/33-eva-brain-v2",
-          "repositoryUrl": "https://github.com/eva-foundry/33-eva-brain-v2",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:09Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0vzgnzUAw",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Full regression test suite (231 tests)",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 2,
-          "boardTitle": "Production Services",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/2",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:06Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0vzgnzUAk",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Implement project lock modal",
-          "status": "Done",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 2,
-          "boardTitle": "Production Services",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/2",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:04Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0vzgnzUAI",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Fix apps page dialog state management",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 2,
-          "boardTitle": "Production Services",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/2",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:01Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0vzgnzT_0",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Complete WI20 test implementation",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 2,
-          "boardTitle": "Production Services",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/2",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:59Z"
         }
       ]
     },
@@ -618,80 +284,19 @@ export const progressSnapshot: ProgressSnapshot = {
       "title": "Infrastructure & Azure",
       "url": "https://github.com/orgs/eva-foundry/projects/3",
       "summary": "Infrastructure, Azure, and platform enablement work.",
-      "itemCount": 7,
+      "itemCount": 3,
       "statusCounts": {
-        "Done": 5,
-        "In Progress": 1,
-        "Todo": 1
+        "Done": 2,
+        "In Progress": 1
       },
       "priorityCounts": {
-        "High": 4,
-        "Medium": 3
+        "High": 2,
+        "Medium": 1
       },
       "sprintCounts": {
         "Sprint 11": 1
       },
       "items": [
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0wzgnzUF8",
-          "type": "DRAFT_ISSUE",
-          "title": "[18-azure-best] Agent checklists for all entries",
-          "status": "Done",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 3,
-          "boardTitle": "Infrastructure & Azure",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/3",
-          "repository": "eva-foundry/18-azure-best",
-          "repositoryUrl": "https://github.com/eva-foundry/18-azure-best",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:34Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0wzgnzUF4",
-          "type": "DRAFT_ISSUE",
-          "title": "[18-azure-best] 32 best practice entries documented",
-          "status": "Done",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 3,
-          "boardTitle": "Infrastructure & Azure",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/3",
-          "repository": "eva-foundry/18-azure-best",
-          "repositoryUrl": "https://github.com/eva-foundry/18-azure-best",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:33Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0wzgnzUFk",
-          "type": "DRAFT_ISSUE",
-          "title": "[98-system-analysis] Cost analysis automation",
-          "status": "Todo",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 3,
-          "boardTitle": "Infrastructure & Azure",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/3",
-          "repository": "eva-foundry/98-system-analysis",
-          "repositoryUrl": "https://github.com/eva-foundry/98-system-analysis",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:31Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0wzgnzUFQ",
-          "type": "DRAFT_ISSUE",
-          "title": "[98-system-analysis] Subscription inventory (3 subs, 1,484+ resources)",
-          "status": "Done",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 3,
-          "boardTitle": "Infrastructure & Azure",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/3",
-          "repository": "eva-foundry/98-system-analysis",
-          "repositoryUrl": "https://github.com/eva-foundry/98-system-analysis",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:30Z"
-        },
         {
           "id": "PVTI_lADOD6FkPc4BQr0wzgnzUE4",
           "type": "DRAFT_ISSUE",
@@ -744,49 +349,19 @@ export const progressSnapshot: ProgressSnapshot = {
       "title": "DPDCA Sprint Coordination",
       "url": "https://github.com/orgs/eva-foundry/projects/4",
       "summary": "Sprint execution packet tracking and D3PDCA flow.",
-      "itemCount": 18,
+      "itemCount": 9,
       "statusCounts": {
-        "In Progress": 10,
-        "Done": 8
+        "Done": 6,
+        "In Progress": 3
       },
       "priorityCounts": {
-        "High": 13,
-        "Medium": 5
+        "High": 6,
+        "Medium": 3
       },
       "sprintCounts": {
-        "Sprint 11": 2
+        "Sprint 11": 1
       },
       "items": [
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0xzgnzUJc",
-          "type": "DRAFT_ISSUE",
-          "title": "[44-eva-jp-spark] GC deployment readiness",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 4,
-          "boardTitle": "DPDCA Sprint Coordination",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/4",
-          "repository": "eva-foundry/44-eva-jp-spark",
-          "repositoryUrl": "https://github.com/eva-foundry/44-eva-jp-spark",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:11Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0xzgnzUJE",
-          "type": "DRAFT_ISSUE",
-          "title": "[44-eva-jp-spark] Phase 3 bilingual AI assistant",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 4,
-          "boardTitle": "DPDCA Sprint Coordination",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/4",
-          "repository": "eva-foundry/44-eva-jp-spark",
-          "repositoryUrl": "https://github.com/eva-foundry/44-eva-jp-spark",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:25:10Z"
-        },
         {
           "id": "PVTI_lADOD6FkPc4BQr0xzgnzUI0",
           "type": "DRAFT_ISSUE",
@@ -921,189 +496,6 @@ export const progressSnapshot: ProgressSnapshot = {
           "repositoryUrl": "https://github.com/eva-foundry/37-data-model",
           "itemUrl": null,
           "updatedAt": "2026-03-20T10:24:58Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0xzgnzUHY",
-          "type": "DRAFT_ISSUE",
-          "title": "[33-eva-brain-v2] FastAPI backend stability fixes",
-          "status": "In Progress",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 4,
-          "boardTitle": "DPDCA Sprint Coordination",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/4",
-          "repository": "eva-foundry/33-eva-brain-v2",
-          "repositoryUrl": "https://github.com/eva-foundry/33-eva-brain-v2",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:24:57Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0xzgnzUHQ",
-          "type": "DRAFT_ISSUE",
-          "title": "[33-eva-brain-v2] Endpoint status reconciliation",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 4,
-          "boardTitle": "DPDCA Sprint Coordination",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/4",
-          "repository": "eva-foundry/33-eva-brain-v2",
-          "repositoryUrl": "https://github.com/eva-foundry/33-eva-brain-v2",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:24:55Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0xzgnzUHE",
-          "type": "DRAFT_ISSUE",
-          "title": "[33-eva-brain-v2] Complete Sprint 11 Phase 1+2 foundation",
-          "status": "Done",
-          "priority": "High",
-          "sprint": "Sprint 11",
-          "boardNumber": 4,
-          "boardTitle": "DPDCA Sprint Coordination",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/4",
-          "repository": "eva-foundry/33-eva-brain-v2",
-          "repositoryUrl": "https://github.com/eva-foundry/33-eva-brain-v2",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:24:53Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0xzgnzUG8",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Full regression test suite (231 tests)",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 4,
-          "boardTitle": "DPDCA Sprint Coordination",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/4",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:24:51Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0xzgnzUGw",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Implement project lock modal",
-          "status": "Done",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 4,
-          "boardTitle": "DPDCA Sprint Coordination",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/4",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:24:49Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0xzgnzUGs",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Fix apps page dialog state management",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 4,
-          "boardTitle": "DPDCA Sprint Coordination",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/4",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:24:45Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0xzgnzUGY",
-          "type": "DRAFT_ISSUE",
-          "title": "[31-eva-faces] Complete WI20 test implementation",
-          "status": "In Progress",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 4,
-          "boardTitle": "DPDCA Sprint Coordination",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/4",
-          "repository": "eva-foundry/31-eva-faces",
-          "repositoryUrl": "https://github.com/eva-foundry/31-eva-faces",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:24:44Z"
-        }
-      ]
-    },
-    {
-      "number": 5,
-      "title": "Documentation & Learning",
-      "url": "https://github.com/orgs/eva-foundry/projects/5",
-      "summary": "Documentation, learning assets, and enablement materials.",
-      "itemCount": 4,
-      "statusCounts": {
-        "Done": 3,
-        "Todo": 1
-      },
-      "priorityCounts": {
-        "High": 2,
-        "Medium": 2
-      },
-      "sprintCounts": {},
-      "items": [
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0yzgnzUKM",
-          "type": "DRAFT_ISSUE",
-          "title": "[18-azure-best] Agent checklists for all entries",
-          "status": "Done",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 5,
-          "boardTitle": "Documentation & Learning",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/5",
-          "repository": "eva-foundry/18-azure-best",
-          "repositoryUrl": "https://github.com/eva-foundry/18-azure-best",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:42Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0yzgnzUKA",
-          "type": "DRAFT_ISSUE",
-          "title": "[18-azure-best] 32 best practice entries documented",
-          "status": "Done",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 5,
-          "boardTitle": "Documentation & Learning",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/5",
-          "repository": "eva-foundry/18-azure-best",
-          "repositoryUrl": "https://github.com/eva-foundry/18-azure-best",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:41Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0yzgnzUJ0",
-          "type": "DRAFT_ISSUE",
-          "title": "[98-system-analysis] Cost analysis automation",
-          "status": "Todo",
-          "priority": "Medium",
-          "sprint": null,
-          "boardNumber": 5,
-          "boardTitle": "Documentation & Learning",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/5",
-          "repository": "eva-foundry/98-system-analysis",
-          "repositoryUrl": "https://github.com/eva-foundry/98-system-analysis",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:40Z"
-        },
-        {
-          "id": "PVTI_lADOD6FkPc4BQr0yzgnzUJw",
-          "type": "DRAFT_ISSUE",
-          "title": "[98-system-analysis] Subscription inventory (3 subs, 1,484+ resources)",
-          "status": "Done",
-          "priority": "High",
-          "sprint": null,
-          "boardNumber": 5,
-          "boardTitle": "Documentation & Learning",
-          "boardUrl": "https://github.com/orgs/eva-foundry/projects/5",
-          "repository": "eva-foundry/98-system-analysis",
-          "repositoryUrl": "https://github.com/eva-foundry/98-system-analysis",
-          "itemUrl": null,
-          "updatedAt": "2026-03-20T10:26:38Z"
         }
       ]
     }
