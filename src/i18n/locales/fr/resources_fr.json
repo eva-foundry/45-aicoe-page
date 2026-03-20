@@ -75,6 +75,7 @@
   "progress.board.items": "Elements",
   "progress.board.inProgress": "En mouvement",
   "progress.board.updated": "Mis a jour",
+  "progress.board.recent": "Elements les plus recents",
   "progress.board.complete": "Avancement",
   "progress.board.open": "Ouvrir le tableau",
   "progress.item.repo": "Depot",

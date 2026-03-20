@@ -74,6 +74,28 @@ const useStyles = makeStyles({
     gap: tokens.spacingHorizontalM,
     marginTop: tokens.spacingVerticalM,
   },
+  boardRecent: {
+    marginTop: tokens.spacingVerticalL,
+    display: "flex",
+    flexDirection: "column",
+    gap: tokens.spacingVerticalS,
+  },
+  boardRecentTitle: {
+    display: "block",
+    color: tokens.colorNeutralForeground3,
+  },
+  boardRecentItem: {
+    display: "flex",
+    justifyContent: "space-between",
+    gap: tokens.spacingHorizontalM,
+    alignItems: "start",
+  },
+  boardRecentItemTitle: {
+    minWidth: 0,
+  },
+  boardRecentItemMeta: {
+    flexShrink: 0,
+  },
   boardMetaLabel: {
     display: "block",
     color: tokens.colorNeutralForeground3,
@@ -197,6 +219,7 @@ function BoardCard({ board, locale, t }: { board: ProgressBoard; locale: string;
   const inProgressCount = getCount(board.statusCounts, "In Progress");
   const todoCount = getCount(board.statusCounts, "Todo");
   const completion = board.itemCount === 0 ? 0 : doneCount / board.itemCount;
+  const recentItems = board.items.slice(0, 3);
 
   return (
     <Card>
@@ -218,6 +241,20 @@ function BoardCard({ board, locale, t }: { board: ProgressBoard; locale: string;
           <Body1 className={styles.boardMetaValue}>{formatDate(board.items[0]?.updatedAt ?? progressSnapshot.generatedAt, locale)}</Body1>
         </div>
       </div>
+
+      {recentItems.length > 0 ? (
+        <div className={styles.boardRecent}>
+          <Caption1 className={styles.boardRecentTitle}>{t("progress.board.recent")}</Caption1>
+          {recentItems.map((item) => (
+            <div key={item.id} className={styles.boardRecentItem}>
+              <Body1 className={styles.boardRecentItemTitle}>{item.title}</Body1>
+              <Badge className={styles.boardRecentItemMeta} appearance="outline" color={getBadgeAppearance(item.status)}>
+                {item.status}
+              </Badge>
+            </div>
+          ))}
+        </div>
+      ) : null}
 
       <div className={styles.badgeRow}>
         <Badge appearance="filled" color="success">{`Done ${doneCount}`}</Badge>

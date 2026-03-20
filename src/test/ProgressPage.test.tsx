@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { screen } from "@testing-library/react";
+import { progressSnapshot } from "../data/progressSnapshot";
 import { renderWithProviders } from "./test-utils";
 import { ProgressPage } from "../pages/progress/ProgressPage";
 
@@ -19,6 +20,13 @@ describe("ProgressPage", () => {
   it("renders the project board section", () => {
     renderWithProviders(<ProgressPage />);
     expect(screen.getByText("progress.section.boards")).toBeInTheDocument();
+  });
+
+  it("renders recent items in the board cards", () => {
+    renderWithProviders(<ProgressPage />);
+    const boardsWithRecentItems = progressSnapshot.boards.filter((board) => board.items.length > 0).length;
+
+    expect(screen.getAllByText("progress.board.recent")).toHaveLength(boardsWithRecentItems);
   });
 
   it("renders the calculated metrics section", () => {

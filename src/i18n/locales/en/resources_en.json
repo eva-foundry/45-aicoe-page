@@ -75,6 +75,7 @@
   "progress.board.items": "Items",
   "progress.board.inProgress": "Moving",
   "progress.board.updated": "Updated",
+  "progress.board.recent": "Most recent items",
   "progress.board.complete": "Completion",
   "progress.board.open": "Open board",
   "progress.item.repo": "Repository",
